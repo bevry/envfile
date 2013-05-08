@@ -1,0 +1,43 @@
+{
+	"name": "envfile",
+	"version": "1.0.0",
+	"description": "Parse and environment environment files (.env) with Node.js",
+	"homepage": "https://github.com/bevry/envfile",
+	"keywords": [
+		"env", "envfile", "dotenv", ".env", "config", "configuration"
+	],
+	"author": "Bevry Pty Ltd <us@bevry.me> (http://bevry.me)",
+	"maintainers": [
+		"Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)"
+	],
+	"contributors": [
+		"Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)"
+	],
+	"bugs": {
+		"url": "https://github.com/bevry/envfile/issues"
+	},
+	"repository" : {
+		"type": "git",
+		"url": "http://github.com/bevry/envfile.git"
+	},
+	"engines" : {
+		"node": ">=0.6.0"
+	},
+	"devDependencies": {
+		"coffee-script": "~1.6.2",
+		"joe": "~1.2.0",
+		"joe-reporter-console": "~1.2.1",
+		"chai": "~1.6.0"
+	},
+	"directories": {
+		"lib": "./out/lib"
+	},
+	"scripts": {
+		"test": "node ./out/test/envfile-test.js"
+	},
+	"bin": {
+		"envfile2json": "./bin/envfile2json.js",
+		"json2envfile": "./bin/json2envfile.js"
+	},
+	"main": "./out/lib/envfile"
+}
