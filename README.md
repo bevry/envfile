@@ -7,9 +7,9 @@
 Parse and environment environment files (.env) with Node.js
 
 
-## What is a envfile?
+## What is an envfile?
 
-They generally are named `.env` or `file.env` and can look like:
+They are generally named `.env` or `file.env` and can look like:
 
 ```
 a=1
@@ -17,6 +17,8 @@ b:2
 c = 3
 d : 4
 ```
+
+[Heroku](https://devcenter.heroku.com/articles/config-vars) and [DocPad](http://docpad.org/docs/config) use them.
 
 
 
