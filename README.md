@@ -18,7 +18,7 @@ c = 3
 d : 4
 ```
 
-[Heroku](https://devcenter.heroku.com/articles/config-vars) and [DocPad](http://docpad.org/docs/config) use them
+[Heroku](https://devcenter.heroku.com/articles/config-vars) and [DocPad](Woot woot! You can now link to headings on the DocPad website! Like this one: http://docpad.org/docs/config#environment-configuration-file) use them
 
 
 
