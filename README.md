@@ -4,7 +4,7 @@
 [![NPM version](https://badge.fury.io/js/envfile.png)](https://npmjs.org/package/envfile)
 [![Flattr this project](https://raw.github.com/balupton/flattr-buttons/master/badge-89x18.gif)](http://flattr.com/thing/344188/balupton-on-Flattr)
 
-Parse and environment environment files (.env) with Node.js
+Parse and write environment files (.env) with Node.js
 
 
 ## What is an envfile?
