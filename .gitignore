@@ -1,18 +1,32 @@
-lib-cov
-*.seed
-*.log
-*.csv
-*.dat
-*.out
-*.pid
-*.gz
+# 2015 March 27
+# https://github.com/bevry/base
 
-pids
-logs
-results
+# Temp Files
+**/.docpad.db
+**/out.*
+**/*.log
+**/*.cpuprofile
+**/*.heapsnapshot
 
-node_modules
-npm-debug.log
-
-test/out/
+# Build Files
+build/
+components/
+bower_components/
+node_modules/
 out/
+coffeejs/
+es5/
+
+# Editor Caches
+.c9/
+
+# Private Files
+.env
+.idea
+.cake_task_cache
+
+
+# =====================================
+# CUSTOM
+
+# None

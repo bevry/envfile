@@ -1,5 +1,6 @@
-# v1.3.18 June 8, 2014
+# 2014 June 8
 # https://github.com/bevry/base
+
 root = true
 
 [*]
