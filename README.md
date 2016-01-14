@@ -56,7 +56,7 @@ They are commonly also called envfiles, .env files, and dotenv files.
 <a href="http://browserify.org" title="Browserify lets you require('modules') in the browser by bundling up all of your dependencies"><h3>Browserify</h3></a><ul>
 <li>Install: <code>npm install --save envfile</code></li>
 <li>Use: <code>require('envfile')</code></li>
-<li>CDN URL: <code>//wzrd.in/bundle/envfile@2.0.0</code></li></ul>
+<li>CDN URL: <code>//wzrd.in/bundle/envfile@2.0.1</code></li></ul>
 
 <a href="http://enderjs.com" title="Ender is a full featured package manager for your browser"><h3>Ender</h3></a><ul>
 <li>Install: <code>ender add envfile</code></li>

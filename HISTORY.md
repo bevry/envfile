@@ -1,5 +1,8 @@
 # History
 
+## v2.0.1 2016 January 14
+- Only include `fs` module for file system operations
+
 ## v2.0.0 2016 January 14
 - Converted from CoffeeScript to ESNext
 - Updated internal conventions

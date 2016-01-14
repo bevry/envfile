@@ -5,7 +5,6 @@
 const ambi = require('ambi')
 const eachr = require('eachr')
 const typeChecker = require('typechecker')
-const fsUtil = require('fs')
 
 // Define
 module.exports = class {
@@ -13,7 +12,7 @@ module.exports = class {
 	// next(err,obj)
 	static parseFile (filePath, next) {
 		// Read
-		fsUtil.readFile(filePath, (err, data) => {
+		require('fs').readFile(filePath, (err, data) => {
 			// Check
 			if (err)  return next(err)  // exit
 
@@ -28,7 +27,7 @@ module.exports = class {
 	// Parse an env file synchronously
 	static parseFileSync (filePath) {
 		// Read
-		const data = fsUtil.readFileSync(filePath)
+		const data = require('fs').readFileSync(filePath)
 
 		// Check the result
 		if ( typeChecker.isError(data) ) {
