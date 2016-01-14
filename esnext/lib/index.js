@@ -1,131 +1,107 @@
-# Requires
-fsUtil = require('fs')
+/* eslint no-sync:0, no-unused-vars:0, no-magic-numbers:0 */
+'use strict'
 
-# Define
-envfile =
-	# Parse an env file asynchronously
-	# next(err,obj)
-	parseFile: (filePath,opts,next) ->
-		# Prepare
-		if opts? is true and next? is false
-			next = opts
-			opts = null
-		opts or= {}
+// Requires
+const ambi = require('ambi')
+const eachr = require('eachr')
+const typeChecker = require('typechecker')
+const fsUtil = require('fs')
 
-		# Read
-		fsUtil.readFile filePath, (err,data) =>
-			# Check
-			return next(err)  if err
+// Define
+module.exports = class {
+	// Parse an env file asynchronously
+	// next(err,obj)
+	static parseFile (filePath, next) {
+		// Read
+		fsUtil.readFile(filePath, (err, data) => {
+			// Check
+			if (err)  return next(err)  // exit
 
-			# Parse
-			dataStr = data.toString()
-			@parse(dataStr, opts, next)
+			// Parse
+			this.parse(data.toString(), next)
+		})
 
-		# Chain
-		@
+		// Chain
+		return this
+	}
 
-	# Parse an env file synchronously
-	parseFileSync: (filePath,opts) ->
-		# Prepare
-		opts or= {}
+	// Parse an env file synchronously
+	static parseFileSync (filePath) {
+		// Read
+		const data = fsUtil.readFileSync(filePath)
 
-		# Read
-		data = fsUtil.readFileSync(filePath)
+		// Check the result
+		if ( typeChecker.isError(data) ) {
+			// An error occured
+			return data
+		}
+		else {
+			// Parse the result
+			return this.parseSync(data.toString())
+		}
+	}
 
-		# Check the result
-		if data instanceof Error
-			# An error occured
-			result = data
-		else
-			# Parse the result
-			dataStr = data.toString()
-			result = @parseSync(dataStr, opts)
+	// Parse an envfile string
+	// next(err,obj)
+	static parse (src, next) {
+		// Call the synchronous method asynchronously and avoid zalgo by wrapping in nextTick
+		process.nextTick(() => {
+			ambi(this.parseSync, src, next)
+		})
 
-		# Return
-		return result
+		// Chain
+		return this
+	}
 
-	# Parse an envfile string
-	# next(err,obj)
-	parse: (src,opts,next) ->
-		# Prepare
-		if opts? is true and next? is false
-			next = opts
-			opts = null
-		opts or= {}
+	// Parse an envfile string synchronously
+	static parseSync (src) {
+		// Try parse JSON
+		try {
+			return JSON.parse(src.toString())
+		}
 
-		# currently the parser only exists in a synchronous version
-		# so we use an instant timeout to simulate async code without any overhead
-		process.nextTick =>
-			# Parse
-			result = @parseSync(src,opts)
-
-			# Check for error
-			if result instanceof Error
-				# Error
-				next(result)
-			else
-				# Success
-				next(null, result)
-
-		# Chain
-		@
-
-	# Parse an envfile string synchronously
-	parseSync: (src,opts) ->
-		# Prepare
-		opts or= {}
-
-		# Try parse JSON
-		try
-			result = JSON.parse(src)
-
-		# Try parse envfile string
-		catch err
-			result = {}
-			lines = src.toString().split('\n')
-			for line in lines
-				match = line.match(/^([^=:]+?)[=\:](.*)/)
-				if match
-					key = match[1].trim()
-					value = match[2].trim()
+		// Try parse envfile string
+		catch ( err ) {
+			const result = {}
+			const lines = src.toString().split('\n')
+			for ( const line of lines ) {
+				const match = line.match(/^([^=:]+?)[=\:](.*)/)
+				if ( match ) {
+					const key = match[1].trim()
+					const value = match[2].trim()
 					result[key] = value
+				}
+			}
+			return result
+		}
+	}
 
-		# Return
+	// Turn an object into envfile string
+	// next(err,str)
+	static stringify (obj, next) {
+		// Call the synchronous method asynchronously and avoid zalgo by wrapping in nextTick
+		process.nextTick(() => {
+			ambi(this.stringifySync, obj, next)
+		})
+
+		// Chain
+		return this
+	}
+
+	// Turn an object into an envfile synchronously
+	static stringifySync (obj) {
+		// Prepare
+		let result = ''
+
+		// Stringify
+		eachr(obj, function (value, key) {
+			if ( key ) {
+				const line = `${key}=${String(value)}`
+				result += line + '\n'
+			}
+		})
+
+		// Return
 		return result
-
-	# Turn an object into envfile string
-	# next(err,str)
-	stringify: (obj,next) ->
-		# currently the parser only exists in a synchronous version
-		# so we use an instant timeout to simulate async code without any overhead
-		process.nextTick =>
-			# Stringify
-			result = @stringifySync(obj)
-
-			# Check
-			if result instanceof Error
-				# Error
-				next(result)
-			else
-				# Success
-				next(null, result)
-
-		# Chain
-		@
-
-	# Turn an object into an envfile synchronously
-	stringifySync: (obj) ->
-		# Prepare
-		result = ''
-
-		# Stringify
-		for own key,value of obj
-			if key
-				line = key+'='+String(value)
-				result += line+'\n'
-
-		# Return
-		return result
-
-# Export
-module.exports = envfile
+	}
+}

@@ -1,12 +1,17 @@
 {
-	"name": "envfile",
-	"version": "1.0.0",
-	"description": "Parse and environment environment files (.env) with Node.js",
-	"homepage": "https://github.com/bevry/envfile",
-	"license": "MIT",
-	"keywords": [
-		"env", "envfile", "dotenv", ".env", "config", "configuration"
-	],
+  "name": "envfile",
+  "version": "2.0.0",
+  "description": "Parse and stringify the environment configuration files and format, also known as .env files and dotenv files",
+  "homepage": "https://github.com/bevry/envfile",
+  "license": "MIT",
+  "keywords": [
+    "env",
+    "envfile",
+    "dotenv",
+    ".env",
+    "config",
+    "configuration"
+  ],
   "badges": {
     "list": [
       "travisci",
@@ -33,26 +38,44 @@
       "slackinURL": "https://slack.bevry.me"
     }
   },
-	"author": "2013+ Bevry Pty Ltd <us@bevry.me> (http://bevry.me)",
-	"maintainers": [
-		"Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)"
-	],
-	"contributors": [
-		"Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)"
-	],
-	"bugs": {
-		"url": "https://github.com/bevry/envfile/issues"
-	},
-	"repository" : {
-		"type": "git",
-		"url": "http://github.com/bevry/envfile.git"
-	},
-	"engines" : {
-		"node": ">=0.10"
-	},
-	"dependencies": {},
-	"devDependencies": {
-	},
+  "author": "2013+ Bevry Pty Ltd <us@bevry.me> (http://bevry.me)",
+  "maintainers": [
+    "Benjamin Lupton <b@lupton.cc> (http://balupton.com)"
+  ],
+  "contributors": [
+    "Benjamin Lupton <b@lupton.cc> (http://balupton.com)"
+  ],
+  "bugs": {
+    "url": "https://github.com/bevry/envfile/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/bevry/envfile.git"
+  },
+  "engines": {
+    "node": ">=0.12"
+  },
+  "main": "./esnextguardian.js",
+  "browser": "./es5/lib/index.js",
+  "jspm": {
+    "main": "./es5/lib/index.js"
+  },
+  "dependencies": {
+    "ambi": "^2.4.0",
+    "eachr": "^3.1.0",
+    "esnextguardian": "^1.2.0",
+    "typechecker": "^4.0.1"
+  },
+  "devDependencies": {
+    "assert-helpers": "^4.1.0",
+    "babel-cli": "^6.4.0",
+    "babel-preset-es2015": "^6.3.13",
+    "eslint": "^1.10.3",
+    "joe": "^1.6.0",
+    "joe-reporter-console": "^1.2.1",
+    "projectz": "^1.0.9",
+    "safeps": "^6.0.2"
+  },
   "scripts": {
     "clean": "node --harmony nakefile.js clean",
     "setup": "node --harmony nakefile.js setup",
@@ -64,10 +87,10 @@
     "release": "node --harmony nakefile.js release",
     "test": "node --harmony ./es5/test/index.js"
   },
-	"bin": {
-		"envfile2json": "./bin/envfile2json.js",
-		"json2envfile": "./bin/json2envfile.js"
-	},
+  "bin": {
+    "envfile2json": "./bin/envfile2json.js",
+    "json2envfile": "./bin/json2envfile.js"
+  },
   "nakeConfiguration": {
     "BABEL_SRC_PATH": "esnext",
     "ESLINT_SRC_PATH": "esnext",
