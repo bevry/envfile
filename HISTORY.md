@@ -2,6 +2,7 @@
 
 ## v2.0.1 2016 January 14
 - Only include `fs` module for file system operations
+- [This release was live coded. You can watch it here.](https://plus.google.com/events/culb97njofcb2bmui3b7qv2btu4)
 
 ## v2.0.0 2016 January 14
 - Converted from CoffeeScript to ESNext
