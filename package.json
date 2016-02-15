@@ -71,7 +71,7 @@
     "assert-helpers": "^4.1.0",
     "babel-cli": "^6.4.0",
     "babel-preset-es2015": "^6.3.13",
-    "eslint": "^1.10.3",
+    "eslint": "^2.1.0",
     "joe": "^1.6.0",
     "joe-reporter-console": "^1.2.1",
     "projectz": "^1.0.9",
