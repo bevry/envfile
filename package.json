@@ -102,7 +102,8 @@
     "eslint-plugin-babel": "^3.2.0",
     "joe": "^1.6.0",
     "joe-reporter-console": "^1.2.1",
-    "projectz": "^1.1.5"
+    "projectz": "^1.1.5",
+    "safeps": "^6.0.2"
   },
   "scripts": {
     "setup": "npm install",
