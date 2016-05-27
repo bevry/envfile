@@ -51,16 +51,27 @@ They are commonly also called envfiles, .env files, and dotenv files.
 
 <a href="https://npmjs.com" title="npm is a package manager for javascript"><h3>NPM</h3></a><ul>
 <li>Install: <code>npm install --save envfile</code></li>
-<li>Use: <code>require('envfile')</code></li></ul>
+<li>Executables: <code>envfile2json</code>, <code>json2envfile</code></li>
+<li>Module: <code>require('envfile')</code></li></ul>
 
 <a href="http://browserify.org" title="Browserify lets you require('modules') in the browser by bundling up all of your dependencies"><h3>Browserify</h3></a><ul>
 <li>Install: <code>npm install --save envfile</code></li>
-<li>Use: <code>require('envfile')</code></li>
-<li>CDN URL: <code>//wzrd.in/bundle/envfile@2.0.1</code></li></ul>
+<li>Module: <code>require('envfile')</code></li>
+<li>CDN URL: <code>//wzrd.in/bundle/envfile@2.1.0</code></li></ul>
 
 <a href="http://enderjs.com" title="Ender is a full featured package manager for your browser"><h3>Ender</h3></a><ul>
 <li>Install: <code>ender add envfile</code></li>
-<li>Use: <code>require('envfile')</code></li></ul>
+<li>Module: <code>require('envfile')</code></li></ul>
+
+<h3><a href="https://github.com/bevry/editions" title="Editions are the best way to produce and consume packages you care about.">Editions</a></h3>
+
+<p>This package is published with the following editions:</p>
+
+<ul><li><code>envfile</code> aliases <code>envfile/index.js</code> which uses <a href="https://github.com/bevry/esnextguardian" title="Loads ES6+ files if the user's environment supports it, otherwise gracefully fallback to ES5 files.">ESNextGuardian</a> to automatically select the correct edition for the consumers environment</li>
+<li><code>envfile/source/index.js</code> is Source + <a href="https://babeljs.io/docs/learn-es2015/" title="ECMAScript Next">ESNext</a> + <a href="https://nodejs.org/dist/latest-v5.x/docs/api/modules.html" title="Node/CJS Modules">Require</a></li>
+<li><code>envfile/es2015/index.js</code> is <a href="https://babeljs.io" title="The compiler for writing next generation JavaScript">Babel</a> Compiled + <a href="http://babeljs.io/docs/plugins/preset-es2015/" title="ECMAScript 2015">ES2015</a> + <a href="https://nodejs.org/dist/latest-v5.x/docs/api/modules.html" title="Node/CJS Modules">Require</a></li></ul>
+
+<p>Older environments may need <a href="https://babeljs.io/docs/usage/polyfill/" title="A polyfill that emulates missing ECMAScript environment features">Babel's Polyfill</a> or something similar.</p>
 
 <!-- /INSTALL -->
 
@@ -146,7 +157,7 @@ console.log(
 
 These amazing people are maintaining this project:
 
-<ul><li><a href="http://balupton.com">Benjamin Lupton</a> — <a href="https://github.com/bevry/envfile/commits?author=balupton" title="View the GitHub contributions of Benjamin Lupton on repository bevry/envfile">view contributions</a></li></ul>
+<ul><li><a href="https://balupton.com">Benjamin Lupton</a> — <a href="https://github.com/bevry/envfile/commits?author=balupton" title="View the GitHub contributions of Benjamin Lupton on repository bevry/envfile">view contributions</a></li></ul>
 
 <h3>Sponsors</h3>
 
@@ -163,7 +174,7 @@ No sponsors yet! Will you be the first?
 
 These amazing people have contributed code to this project:
 
-<ul><li><a href="http://balupton.com">Benjamin Lupton</a> — <a href="https://github.com/bevry/envfile/commits?author=balupton" title="View the GitHub contributions of Benjamin Lupton on repository bevry/envfile">view contributions</a></li></ul>
+<ul><li><a href="https://balupton.com">Benjamin Lupton</a> — <a href="https://github.com/bevry/envfile/commits?author=balupton" title="View the GitHub contributions of Benjamin Lupton on repository bevry/envfile">view contributions</a></li></ul>
 
 <a href="https://github.com/bevry/envfile/blob/master/CONTRIBUTING.md#files">Discover how you can contribute by heading on over to the <code>CONTRIBUTING.md</code> file.</a>
 

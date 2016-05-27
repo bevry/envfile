@@ -1,5 +1,10 @@
 # History
 
+## v2.1.0 2016 May 27
+- Updated internal conventions
+  - Moved from [ESNextGuardian](https://github.com/bevry/esnextguardian) to [Editions](https://github.com/bevry/editions)
+	- No longer exports a ES6 Class, just exports a plain JavaScript object
+
 ## v2.0.1 2016 January 14
 - Only include `fs` module for file system operations
 - [This release was live coded. You can watch it here.](https://plus.google.com/events/culb97njofcb2bmui3b7qv2btu4)
