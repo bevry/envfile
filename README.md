@@ -57,7 +57,7 @@ They are commonly also called envfiles, .env files, and dotenv files.
 <a href="http://browserify.org" title="Browserify lets you require('modules') in the browser by bundling up all of your dependencies"><h3>Browserify</h3></a><ul>
 <li>Install: <code>npm install --save envfile</code></li>
 <li>Module: <code>require('envfile')</code></li>
-<li>CDN URL: <code>//wzrd.in/bundle/envfile@2.1.0</code></li></ul>
+<li>CDN URL: <code>//wzrd.in/bundle/envfile@2.1.1</code></li></ul>
 
 <a href="http://enderjs.com" title="Ender is a full featured package manager for your browser"><h3>Ender</h3></a><ul>
 <li>Install: <code>ender add envfile</code></li>
@@ -67,7 +67,7 @@ They are commonly also called envfiles, .env files, and dotenv files.
 
 <p>This package is published with the following editions:</p>
 
-<ul><li><code>envfile</code> aliases <code>envfile/index.js</code> which uses <a href="https://github.com/bevry/esnextguardian" title="Loads ES6+ files if the user's environment supports it, otherwise gracefully fallback to ES5 files.">ESNextGuardian</a> to automatically select the correct edition for the consumers environment</li>
+<ul><li><code>envfile</code> aliases <code>envfile/index.js</code> which uses <a href="https://github.com/bevry/editions" title="Editions are the best way to produce and consume packages you care about.">Editions</a> to automatically select the correct edition for the consumers environment</li>
 <li><code>envfile/source/index.js</code> is Source + <a href="https://babeljs.io/docs/learn-es2015/" title="ECMAScript Next">ESNext</a> + <a href="https://nodejs.org/dist/latest-v5.x/docs/api/modules.html" title="Node/CJS Modules">Require</a></li>
 <li><code>envfile/es2015/index.js</code> is <a href="https://babeljs.io" title="The compiler for writing next generation JavaScript">Babel</a> Compiled + <a href="http://babeljs.io/docs/plugins/preset-es2015/" title="ECMAScript 2015">ES2015</a> + <a href="https://nodejs.org/dist/latest-v5.x/docs/api/modules.html" title="Node/CJS Modules">Require</a></li></ul>
 

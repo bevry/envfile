@@ -1,5 +1,8 @@
 # History
 
+## v2.1.1 2016 May 27
+- Fixed missing dependency (regression since v1.2.0)
+
 ## v2.1.0 2016 May 27
 - Updated internal conventions
   - Moved from [ESNextGuardian](https://github.com/bevry/esnextguardian) to [Editions](https://github.com/bevry/editions)
