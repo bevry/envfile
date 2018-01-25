@@ -63,7 +63,7 @@ module.exports = {
 			const result = {}
 			const lines = src.toString().split('\n')
 			for ( const line of lines ) {
-				const match = line.match(/^([^=:]+?)[=\:](.*)/)
+				const match = line.match(/^([^=:#]+?)[=\:](.*)/)
 				if ( match ) {
 					const key = match[1].trim()
 					const value = match[2].trim()
