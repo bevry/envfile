@@ -2,6 +2,7 @@
 
 /* eslint no-var:0, no-sync:0 */
 'use strict'
+
 var data = ''
 process.stdin.on('readable', function () {
 	var chunk = process.stdin.read()

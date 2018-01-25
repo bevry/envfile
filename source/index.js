@@ -1,4 +1,5 @@
 /* eslint no-sync:0, no-unused-vars:0 */
+'use strict'
 
 // Requires
 const ambi = require('ambi')
@@ -13,7 +14,7 @@ module.exports = {
 		// Read
 		require('fs').readFile(filePath, (err, data) => {
 			// Check
-			if (err)  return next(err)  // exit
+			if (err) return next(err)  // exit
 
 			// Parse
 			this.parse(data.toString(), next)
@@ -29,7 +30,7 @@ module.exports = {
 		const data = require('fs').readFileSync(filePath)
 
 		// Check the result
-		if ( typeChecker.isError(data) ) {
+		if (typeChecker.isError(data)) {
 			// An error occured
 			return data
 		}
@@ -59,12 +60,12 @@ module.exports = {
 		}
 
 		// Try parse envfile string
-		catch ( err ) {
+		catch (err) {
 			const result = {}
 			const lines = src.toString().split('\n')
-			for ( const line of lines ) {
-				const match = line.match(/^([^=:#]+?)[=\:](.*)/)
-				if ( match ) {
+			for (const line of lines) {
+				const match = line.match(/^([^=:#]+?)[=:](.*)/)
+				if (match) {
 					const key = match[1].trim()
 					const value = match[2].trim()
 					result[key] = value
@@ -93,7 +94,7 @@ module.exports = {
 
 		// Stringify
 		eachr(obj, function (value, key) {
-			if ( key ) {
+			if (key) {
 				const line = `${key}=${String(value)}`
 				result += line + '\n'
 			}
