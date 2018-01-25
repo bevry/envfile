@@ -1,5 +1,9 @@
 # History
 
+## v2.2.0 2018 January 25
+- Ignore comment lines inside your envfile
+  - Thanks to [andyedwardsdfdl](https://github.com/andyedwardsdfdl) for [pull request #9](https://github.com/bevry/envfile/pull/9)
+
 ## v2.1.1 2016 May 27
 - Fixed missing dependency (regression since v1.2.0)
 

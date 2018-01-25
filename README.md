@@ -14,7 +14,7 @@
 <span class="badge-daviddmdev"><a href="https://david-dm.org/bevry/envfile#info=devDependencies" title="View the status of this project's development dependencies on DavidDM"><img src="https://img.shields.io/david/dev/bevry/envfile.svg" alt="Dev Dependency Status" /></a></span>
 <br class="badge-separator" />
 <span class="badge-slackin"><a href="https://slack.bevry.me" title="Join this project's slack community"><img src="https://slack.bevry.me/badge.svg" alt="Slack community badge" /></a></span>
-<span class="badge-patreon"><a href="http://patreon.com/bevry" title="Donate to this project using Patreon"><img src="https://img.shields.io/badge/patreon-donate-yellow.svg" alt="Patreon donate button" /></a></span>
+<span class="badge-patreon"><a href="https://patreon.com/bevry" title="Donate to this project using Patreon"><img src="https://img.shields.io/badge/patreon-donate-yellow.svg" alt="Patreon donate button" /></a></span>
 <span class="badge-gratipay"><a href="https://www.gratipay.com/bevry" title="Donate weekly to this project using Gratipay"><img src="https://img.shields.io/badge/gratipay-donate-yellow.svg" alt="Gratipay donate button" /></a></span>
 <span class="badge-flattr"><a href="https://flattr.com/profile/balupton" title="Donate to this project using Flattr"><img src="https://img.shields.io/badge/flattr-donate-yellow.svg" alt="Flattr donate button" /></a></span>
 <span class="badge-paypal"><a href="https://bevry.me/paypal" title="Donate to this project using Paypal"><img src="https://img.shields.io/badge/paypal-donate-yellow.svg" alt="PayPal donate button" /></a></span>
@@ -57,7 +57,7 @@ They are commonly also called envfiles, .env files, and dotenv files.
 <a href="http://browserify.org" title="Browserify lets you require('modules') in the browser by bundling up all of your dependencies"><h3>Browserify</h3></a><ul>
 <li>Install: <code>npm install --save envfile</code></li>
 <li>Module: <code>require('envfile')</code></li>
-<li>CDN URL: <code>//wzrd.in/bundle/envfile@2.1.1</code></li></ul>
+<li>CDN URL: <code>//wzrd.in/bundle/envfile@2.2.0</code></li></ul>
 
 <a href="http://enderjs.com" title="Ender is a full featured package manager for your browser"><h3>Ender</h3></a><ul>
 <li>Install: <code>ender add envfile</code></li>
@@ -157,13 +157,13 @@ console.log(
 
 These amazing people are maintaining this project:
 
-<ul><li><a href="https://balupton.com">Benjamin Lupton</a> — <a href="https://github.com/bevry/envfile/commits?author=balupton" title="View the GitHub contributions of Benjamin Lupton on repository bevry/envfile">view contributions</a></li></ul>
+<ul><li><a href="http://balupton.com">Benjamin Lupton</a> — <a href="https://github.com/bevry/envfile/commits?author=balupton" title="View the GitHub contributions of Benjamin Lupton on repository bevry/envfile">view contributions</a></li></ul>
 
 <h3>Sponsors</h3>
 
 No sponsors yet! Will you be the first?
 
-<span class="badge-patreon"><a href="http://patreon.com/bevry" title="Donate to this project using Patreon"><img src="https://img.shields.io/badge/patreon-donate-yellow.svg" alt="Patreon donate button" /></a></span>
+<span class="badge-patreon"><a href="https://patreon.com/bevry" title="Donate to this project using Patreon"><img src="https://img.shields.io/badge/patreon-donate-yellow.svg" alt="Patreon donate button" /></a></span>
 <span class="badge-gratipay"><a href="https://www.gratipay.com/bevry" title="Donate weekly to this project using Gratipay"><img src="https://img.shields.io/badge/gratipay-donate-yellow.svg" alt="Gratipay donate button" /></a></span>
 <span class="badge-flattr"><a href="https://flattr.com/profile/balupton" title="Donate to this project using Flattr"><img src="https://img.shields.io/badge/flattr-donate-yellow.svg" alt="Flattr donate button" /></a></span>
 <span class="badge-paypal"><a href="https://bevry.me/paypal" title="Donate to this project using Paypal"><img src="https://img.shields.io/badge/paypal-donate-yellow.svg" alt="PayPal donate button" /></a></span>
@@ -174,7 +174,7 @@ No sponsors yet! Will you be the first?
 
 These amazing people have contributed code to this project:
 
-<ul><li><a href="https://balupton.com">Benjamin Lupton</a> — <a href="https://github.com/bevry/envfile/commits?author=balupton" title="View the GitHub contributions of Benjamin Lupton on repository bevry/envfile">view contributions</a></li></ul>
+<ul><li><a href="http://balupton.com">Benjamin Lupton</a> — <a href="https://github.com/bevry/envfile/commits?author=balupton" title="View the GitHub contributions of Benjamin Lupton on repository bevry/envfile">view contributions</a></li></ul>
 
 <a href="https://github.com/bevry/envfile/blob/master/CONTRIBUTING.md#files">Discover how you can contribute by heading on over to the <code>CONTRIBUTING.md</code> file.</a>
 

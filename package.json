@@ -1,6 +1,6 @@
 {
   "name": "envfile",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "description": "Parse and stringify the environment configuration files and format, also known as .env files and dotenv files",
   "homepage": "https://github.com/bevry/envfile",
   "license": "MIT",
@@ -40,10 +40,10 @@
   },
   "author": "2013+ Bevry Pty Ltd <us@bevry.me> (http://bevry.me)",
   "maintainers": [
-    "Benjamin Lupton <b@lupton.cc> (https://balupton.com)"
+    "Benjamin Lupton <b@lupton.cc> (http://balupton.com)"
   ],
   "contributors": [
-    "Benjamin Lupton <b@lupton.cc> (https://balupton.com)"
+    "Benjamin Lupton <b@lupton.cc> (http://balupton.com)"
   ],
   "bugs": {
     "url": "https://github.com/bevry/envfile/issues"
