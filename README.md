@@ -59,7 +59,7 @@ They are commonly also called envfiles, .env files, and dotenv files.
 <a href="http://browserify.org" title="Browserify lets you require('modules') in the browser by bundling up all of your dependencies"><h3>Browserify</h3></a><ul>
 <li>Install: <code>npm install --save envfile</code></li>
 <li>Module: <code>require('envfile')</code></li>
-<li>CDN URL: <code>//wzrd.in/bundle/envfile@2.2.0</code></li></ul>
+<li>CDN URL: <code>//wzrd.in/bundle/envfile@2.3.0</code></li></ul>
 
 <a href="http://enderjs.com" title="Ender is a full featured package manager for your browser"><h3>Ender</h3></a><ul>
 <li>Install: <code>ender add envfile</code></li>
@@ -97,10 +97,10 @@ echo '{"a":1,"b":2}' | json2envfile > config.env
 
 ``` javascript
 // Include envfile
-var envfile = require('envfile')
-var sourcePath = 'file.env'
-var sourceString = "a=1\nb:2"
-var sourceObject = {a:1, b:2}
+const envfile = require('envfile')
+const sourcePath = 'file.env'
+const sourceString = "a=1\nb:2"
+const sourceObject = {a:1, b:2}
 
 // Parse an envfile path
 // async
