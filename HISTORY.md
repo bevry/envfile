@@ -1,5 +1,9 @@
 # History
 
+## v3.1.0 2019 November 13
+
+-   Updated dependencies, [base files](https://github.com/bevry/base), and [editions](https://editions.bevry.me) using [boundation](https://github.com/bevry/boundation)
+
 ## v3.0.0 2019 January 1
 
 -   Added JSDoc documentation
