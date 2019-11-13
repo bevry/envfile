@@ -129,7 +129,7 @@
     "minami": "^1.2.3",
     "prettier": "^1.19.1",
     "projectz": "^1.9.0",
-    "safeps": "7.0.1",
+    "safeps": "8.1.0",
     "surge": "^0.21.3",
     "valid-directory": "^1.0.0"
   },
