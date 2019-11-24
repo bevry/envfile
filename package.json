@@ -99,7 +99,7 @@
   "dependencies": {
     "ambi": "^6.0.0",
     "eachr": "^4.0.0",
-    "typechecker": "^4.10.0"
+    "typechecker": "^5.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.7.0",
