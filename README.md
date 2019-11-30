@@ -50,15 +50,8 @@ They are commonly also called envfiles, .env files, and dotenv files.
 <h2>Install</h2>
 
 <a href="https://npmjs.com" title="npm is a package manager for javascript"><h3>npm</h3></a>
-<h4>Install Globally</h4>
-<ul>
-<li>Install: <code>npm install --global envfile</code></li>
-<li>Executables: <code>envfile2json</code>, <code>json2envfile</code></li>
-</ul>
-<h4>Install Locally</h4>
 <ul>
 <li>Install: <code>npm install --save envfile</code></li>
-<li>Executables: <code>npx envfile2json</code>, <code>json2envfile</code></li>
 <li>Require: <code>require('envfile')</code></li>
 </ul>
 
