@@ -1,16 +1,19 @@
 {
   "name": "envfile",
-  "version": "4.5.0",
+  "version": "5.0.0",
   "description": "Parse and stringify the environment configuration files and format, also known as .env files and dotenv files",
   "homepage": "https://github.com/bevry/envfile",
   "license": "MIT",
   "keywords": [
+    ".env",
+    "browser",
+    "config",
+    "configuration",
+    "dotenv",
     "env",
     "envfile",
-    "dotenv",
-    ".env",
-    "config",
-    "configuration"
+    "typed",
+    "types"
   ],
   "badges": {
     "list": [
@@ -50,8 +53,7 @@
   ],
   "contributors": [
     "Benjamin Lupton <b@lupton.cc> (http://balupton.com)",
-    "andyedwardsdfdl (https://github.com/andyedwardsdfdl)",
-    "dependabot-preview[bot] (http://github.com/apps/dependabot-preview)"
+    "andyedwardsdfdl (https://github.com/andyedwardsdfdl)"
   ],
   "bugs": {
     "url": "https://github.com/bevry/envfile/issues"
@@ -61,11 +63,11 @@
     "url": "https://github.com/bevry/envfile.git"
   },
   "engines": {
-    "node": ">=8"
+    "node": ">=10"
   },
   "editions": [
     {
-      "description": "esnext source code with require for modules",
+      "description": "ESNext source code for Node.js with Require for modules",
       "directory": "source",
       "entry": "index.js",
       "tags": [
@@ -74,12 +76,12 @@
         "require"
       ],
       "engines": {
-        "node": "8 || 10 || 12",
+        "node": "10 || 12",
         "browsers": false
       }
     },
     {
-      "description": "esnext compiled for browsers with require for modules",
+      "description": "ESNext compiled for web browsers with Require for modules",
       "directory": "edition-browsers",
       "entry": "index.js",
       "tags": [
@@ -96,28 +98,28 @@
   "main": "source/index.js",
   "browser": "edition-browsers/index.js",
   "dependencies": {
-    "ambi": "^6.4.0",
+    "ambi": "^7.0.0",
     "eachr": "^4.5.0",
-    "typechecker": "^6.2.0"
+    "typechecker": "^6.3.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.7.5",
-    "@babel/core": "^7.7.5",
-    "@babel/plugin-proposal-object-rest-spread": "^7.7.4",
-    "@babel/preset-env": "^7.7.6",
-    "assert-helpers": "^5.8.0",
-    "eslint": "^6.7.2",
-    "eslint-config-bevry": "^2.2.0",
-    "eslint-config-prettier": "^6.7.0",
-    "eslint-plugin-prettier": "^3.1.1",
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "assert-helpers": "^6.0.0",
+    "eslint": "^6.8.0",
+    "eslint-config-bevry": "^2.3.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-prettier": "^3.1.2",
     "jsdoc": "^3.6.3",
-    "kava": "^4.3.0",
+    "kava": "^4.4.0",
     "minami": "^1.2.3",
-    "prettier": "^1.19.1",
-    "projectz": "^1.15.0",
-    "safeps": "^9.2.0",
+    "prettier": "^2.0.2",
+    "projectz": "^1.19.0",
+    "safeps": "^9.3.0",
     "surge": "^0.21.3",
-    "valid-directory": "^1.5.0"
+    "valid-directory": "^1.6.0"
   },
   "scripts": {
     "our:clean": "rm -Rf ./docs ./edition* ./es2015 ./es5 ./out ./.next",
@@ -138,9 +140,9 @@
     "our:setup:install": "npm install",
     "our:test": "npm run our:verify && npm test",
     "our:verify": "npm run our:verify:directory && npm run our:verify:eslint && npm run our:verify:prettier",
-    "our:verify:directory": "npx valid-directory",
+    "our:verify:directory": "valid-directory",
     "our:verify:eslint": "eslint --fix --ignore-pattern '**/*.d.ts' --ignore-pattern '**/vendor/' --ignore-pattern '**/node_modules/' --ext .mjs,.js,.jsx,.ts,.tsx ./source",
-    "our:verify:prettier": "prettier --write ./source/**",
+    "our:verify:prettier": "prettier --write .",
     "test": "node ./source/test.js"
   },
   "eslintConfig": {
@@ -160,7 +162,10 @@
           [
             "@babel/preset-env",
             {
-              "targets": "defaults",
+              "targets": {
+                "esmodules": false,
+                "browsers": "defaults"
+              },
               "modules": false
             }
           ]

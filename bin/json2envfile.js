@@ -6,7 +6,7 @@
 var data = ''
 process.stdin.on('readable', function () {
 	var chunk = process.stdin.read()
-	if (chunk)  data += chunk.toString()
+	if (chunk) data += chunk.toString()
 })
 process.stdin.on('end', function () {
 	var result = require('../').stringifySync(JSON.parse(data))

@@ -105,7 +105,7 @@ function stringifySync(obj) {
 	let result = ''
 
 	// Stringify
-	eachr(obj, function(value, key) {
+	eachr(obj, function (value, key) {
 		if (key) {
 			const line = `${key}=${String(value)}`
 			result += line + '\n'
@@ -134,5 +134,5 @@ module.exports = {
 	parse,
 	parseSync,
 	stringify,
-	stringifySync
+	stringifySync,
 }
