@@ -111,7 +111,7 @@ console.log(envfile.stringifySync(sourceObject))
 
 ``` html
 <script type="module">
-    import * as pkg from '//dev.jspm.io/envfile@5.0.0'
+    import * as pkg from '//dev.jspm.io/envfile@5.1.0'
 </script>
 ```
 
