@@ -48,7 +48,7 @@ They are commonly also called envfiles, .env files, and dotenv files.
 
 ## Usage
 
-[Complete API Documentation.](http://master.envfile.bevry.surge.sh/docs/)
+[Complete API Documentation.](http://master.envfile.bevry.surge.sh/docs/index.html)
 
 ### Via the Command Line
 
@@ -111,7 +111,7 @@ console.log(envfile.stringifySync(sourceObject))
 
 ``` html
 <script type="module">
-    import * as pkg from '//dev.jspm.io/envfile@5.1.0'
+    import * as pkg from '//dev.jspm.io/envfile@5.2.0'
 </script>
 ```
 
@@ -119,7 +119,7 @@ console.log(envfile.stringifySync(sourceObject))
 
 <p>This package is published with the following editions:</p>
 
-<ul><li><code>envfile</code> aliases <code>envfile/source/index.js</code></li>
+<ul><li><code>envfile</code> aliases <code>envfile/index.js</code> which uses the <a href="https://github.com/bevry/editions" title="You can use the Editions Autoloader to autoload the appropriate edition for your consumers environment">Editions Autoloader</a> to automatically select the correct edition for the consumer's environment</li>
 <li><code>envfile/source/index.js</code> is <a href="https://en.wikipedia.org/wiki/ECMAScript#ES.Next" title="ECMAScript Next">ESNext</a> source code for <a href="https://nodejs.org" title="Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine">Node.js</a> with <a href="https://nodejs.org/dist/latest-v5.x/docs/api/modules.html" title="Node/CJS Modules">Require</a> for modules</li>
 <li><code>envfile/edition-browsers/index.js</code> is <a href="https://en.wikipedia.org/wiki/ECMAScript#ES.Next" title="ECMAScript Next">ESNext</a> compiled for web browsers with <a href="https://nodejs.org/dist/latest-v5.x/docs/api/modules.html" title="Node/CJS Modules">Require</a> for modules</li></ul>
 
@@ -164,7 +164,7 @@ This project provides its type information via inline <a href="http://usejsdoc.o
 
 These amazing people are maintaining this project:
 
-<ul><li><a href="http://balupton.com">Benjamin Lupton</a> — <a href="https://github.com/bevry/envfile/commits?author=balupton" title="View the GitHub contributions of Benjamin Lupton on repository bevry/envfile">view contributions</a></li></ul>
+<ul><li><a href="https://github.com/balupton">Benjamin Lupton</a> — <a href="https://github.com/bevry/envfile/commits?author=balupton" title="View the GitHub contributions of Benjamin Lupton on repository bevry/envfile">view contributions</a></li></ul>
 
 <h3>Sponsors</h3>
 
@@ -184,9 +184,8 @@ No sponsors yet! Will you be the first?
 
 These amazing people have contributed code to this project:
 
-<ul><li><a href="http://balupton.com">Benjamin Lupton</a> — <a href="https://github.com/bevry/envfile/commits?author=balupton" title="View the GitHub contributions of Benjamin Lupton on repository bevry/envfile">view contributions</a></li>
-<li><a href="https://github.com/andyedwardsdfdl">andyedwardsdfdl</a> — <a href="https://github.com/bevry/envfile/commits?author=andyedwardsdfdl" title="View the GitHub contributions of andyedwardsdfdl on repository bevry/envfile">view contributions</a></li>
-<li><a href="http://github.com/apps/dependabot-preview">dependabot-preview[bot]</a> — <a href="https://github.com/bevry/envfile/commits?author=dependabot-preview[bot]" title="View the GitHub contributions of dependabot-preview[bot] on repository bevry/envfile">view contributions</a></li></ul>
+<ul><li><a href="https://github.com/balupton">Benjamin Lupton</a> — <a href="https://github.com/bevry/envfile/commits?author=balupton" title="View the GitHub contributions of Benjamin Lupton on repository bevry/envfile">view contributions</a></li>
+<li><a href="https://github.com/andyedwardsdfdl">andyedwardsdfdl</a> — <a href="https://github.com/bevry/envfile/commits?author=andyedwardsdfdl" title="View the GitHub contributions of andyedwardsdfdl on repository bevry/envfile">view contributions</a></li></ul>
 
 <a href="https://github.com/bevry/envfile/blob/master/CONTRIBUTING.md#files">Discover how you can contribute by heading on over to the <code>CONTRIBUTING.md</code> file.</a>
 
