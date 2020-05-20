@@ -1,5 +1,13 @@
 # History
 
+## v6.0.0 2020 May 21
+
+-   Breaking Changes:
+    -   API is now only `stringify` and `parse`
+    -   CLI is now `envfile` which takes the argument `env2json` or `json2env` and still receives input via stdin
+-   Converted from JavaScript to TypeScript
+-   Updated dependencies, [base files](https://github.com/bevry/base), and [editions](https://editions.bevry.me) using [boundation](https://github.com/bevry/boundation)
+
 ## v5.2.0 2020 May 12
 
 -   Updated dependencies, [base files](https://github.com/bevry/base), and [editions](https://editions.bevry.me) using [boundation](https://github.com/bevry/boundation)

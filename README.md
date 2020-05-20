@@ -48,7 +48,7 @@ They are commonly also called envfiles, .env files, and dotenv files.
 
 ## Usage
 
-[Complete API Documentation.](http://master.envfile.bevry.surge.sh/docs/index.html)
+[Complete API Documentation.](http://master.envfile.bevry.surge.sh/docs/globals.html)
 
 ### Via the Command Line
 
@@ -56,44 +56,23 @@ Requires a global installation of envfile: `npm install -g envfile`
 
 ```bash
 # envfile to JSON
-echo -e "a=1\nb:2" | envfile2json > config.json
+echo -e "a=1\nb:2" | envfile env2json > config.json
 
 # JSON to envfile
-echo '{"a":1,"b":2}' | json2envfile > config.env
+echo '{"a":1,"b":2}' | envfile json2env > config.env
 ```
 
 ### Via [Node.js](https://nodejs.org/en/)
 
 ```javascript
 // Include envfile
-const envfile = require('envfile')
-const sourcePath = 'file.env'
-const sourceString = 'a=1\nb:2'
-const sourceObject = { a: 1, b: 2 }
-
-// Parse an envfile path
-// async
-envfile.parseFile(sourcePath, function (err, obj) {
-    console.log(err, obj)
-})
-// sync
-console.log(envfile.parseFileSync(sourcePath))
+const { parse, stringify } = require('envfile')
 
 // Parse an envfile string
-// async
-envfile.parse(sourceString, function (err, obj) {
-    console.log(err, obj)
-})
-// sync
-console.log(envfile.parseSync(sourceString))
+console.log(parse('a=1\nb:2'))
 
 // Stringify a javascript object to an envfile string
-// async
-envfile.stringify(sourceObject, function (err, str) {
-    console.log(err, str)
-})
-// sync
-console.log(envfile.stringifySync(sourceObject))
+console.log(stringify({ a: 1, b: 2 }))
 ```
 
 <!-- INSTALL/ -->
@@ -101,17 +80,40 @@ console.log(envfile.stringifySync(sourceObject))
 <h2>Install</h2>
 
 <a href="https://npmjs.com" title="npm is a package manager for javascript"><h3>npm</h3></a>
+<h4>Install Globally</h4>
+<ul>
+<li>Install: <code>npm install --global envfile</code></li>
+<li>Executable: <code>envfile</code></li>
+</ul>
+<h4>Install Locally</h4>
 <ul>
 <li>Install: <code>npm install --save envfile</code></li>
+<li>Executable: <code>npx envfile</code></li>
 <li>Import: <code>import * as pkg from ('envfile')</code></li>
 <li>Require: <code>const pkg = require('envfile')</code></li>
 </ul>
+
+<a href="https://www.pika.dev/cdn" title="100% Native ES Modules CDN"><h3>pika</h3></a>
+
+``` html
+<script type="module">
+    import * as pkg from '//cdn.pika.dev/envfile/^6.0.0'
+</script>
+```
+
+<a href="https://unpkg.com" title="unpkg is a fast, global content delivery network for everything on npm"><h3>unpkg</h3></a>
+
+``` html
+<script type="module">
+    import * as pkg from '//unpkg.com/envfile@^6.0.0'
+</script>
+```
 
 <a href="https://jspm.io" title="Native ES Modules CDN"><h3>jspm</h3></a>
 
 ``` html
 <script type="module">
-    import * as pkg from '//dev.jspm.io/envfile@5.2.0'
+    import * as pkg from '//dev.jspm.io/envfile@6.0.0'
 </script>
 ```
 
@@ -119,21 +121,10 @@ console.log(envfile.stringifySync(sourceObject))
 
 <p>This package is published with the following editions:</p>
 
-<ul><li><code>envfile</code> aliases <code>envfile/index.js</code> which uses the <a href="https://github.com/bevry/editions" title="You can use the Editions Autoloader to autoload the appropriate edition for your consumers environment">Editions Autoloader</a> to automatically select the correct edition for the consumer's environment</li>
-<li><code>envfile/source/index.js</code> is <a href="https://en.wikipedia.org/wiki/ECMAScript#ES.Next" title="ECMAScript Next">ESNext</a> source code for <a href="https://nodejs.org" title="Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine">Node.js</a> with <a href="https://nodejs.org/dist/latest-v5.x/docs/api/modules.html" title="Node/CJS Modules">Require</a> for modules</li>
-<li><code>envfile/edition-browsers/index.js</code> is <a href="https://en.wikipedia.org/wiki/ECMAScript#ES.Next" title="ECMAScript Next">ESNext</a> compiled for web browsers with <a href="https://nodejs.org/dist/latest-v5.x/docs/api/modules.html" title="Node/CJS Modules">Require</a> for modules</li></ul>
-
-<h3><a href="https://www.typescriptlang.org/" title="TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. ">TypeScript</a></h3>
-
-This project provides its type information via inline <a href="http://usejsdoc.org" title="JSDoc is an API documentation generator for JavaScript, similar to Javadoc or phpDocumentor">JSDoc Comments</a>. To make use of this in <a href="https://www.typescriptlang.org/" title="TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. ">TypeScript</a>, set your <code>maxNodeModuleJsDepth</code> compiler option to `5` or thereabouts. You can accomlish this via your `tsconfig.json` file like so:
-
-``` json
-{
-  "compilerOptions": {
-    "maxNodeModuleJsDepth": 5
-  }
-}
-```
+<ul><li><code>envfile/source/index.ts</code> is <a href="https://www.typescriptlang.org/" title="TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. ">TypeScript</a> source code with <a href="https://babeljs.io/docs/learn-es2015/#modules" title="ECMAScript Modules">Import</a> for modules</li>
+<li><code>envfile</code> aliases <code>envfile/edition-esnext/index.js</code></li>
+<li><code>envfile/edition-esnext/index.js</code> is <a href="https://www.typescriptlang.org/" title="TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. ">TypeScript</a> compiled against <a href="https://en.wikipedia.org/wiki/ECMAScript#ES.Next" title="ECMAScript Next">ESNext</a> for <a href="https://nodejs.org" title="Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine">Node.js</a> with <a href="https://nodejs.org/dist/latest-v5.x/docs/api/modules.html" title="Node/CJS Modules">Require</a> for modules</li>
+<li><code>envfile/edition-browsers/index.js</code> is <a href="https://www.typescriptlang.org/" title="TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. ">TypeScript</a> compiled against <a href="https://en.wikipedia.org/wiki/ECMAScript#10th_Edition_-_ECMAScript_2019" title="ECMAScript ES2019">ES2019</a> for web browsers with <a href="https://babeljs.io/docs/learn-es2015/#modules" title="ECMAScript Modules">Import</a> for modules</li></ul>
 
 <!-- /INSTALL -->
 

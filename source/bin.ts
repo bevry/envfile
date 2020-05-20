@@ -1,15 +1,13 @@
-#!/usr/bin/env node
+import { parse, stringify } from './index.js'
 
-/* eslint no-var:0, no-sync:0 */
-'use strict'
-
-var data = ''
+let data = ''
 process.stdin.on('readable', function () {
-	var chunk = process.stdin.read()
+	const chunk = process.stdin.read()
 	if (chunk) data += chunk.toString()
 })
 process.stdin.on('end', function () {
-	// var result = JSON.stringify(require('../').parseSync(data))
-	// var result = require('..').stringifySync(JSON.parse(data))
+	const result = process.argv.includes('json2env')
+		? stringify(JSON.parse(data))
+		: JSON.stringify(parse(data))
 	process.stdout.write(result)
 })
