@@ -9,6 +9,7 @@ process.stdin.on('readable', function () {
 	if (chunk) data += chunk.toString()
 })
 process.stdin.on('end', function () {
-	var result = require('../').stringifySync(JSON.parse(data))
+	// var result = JSON.stringify(require('../').parseSync(data))
+	// var result = require('..').stringifySync(JSON.parse(data))
 	process.stdout.write(result)
 })
