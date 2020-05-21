@@ -97,7 +97,7 @@ console.log(stringify({ a: 1, b: 2 }))
 
 ``` html
 <script type="module">
-    import * as pkg from '//cdn.pika.dev/envfile/^6.1.0'
+    import * as pkg from '//cdn.pika.dev/envfile/^6.2.0'
 </script>
 ```
 
@@ -105,7 +105,7 @@ console.log(stringify({ a: 1, b: 2 }))
 
 ``` html
 <script type="module">
-    import * as pkg from '//unpkg.com/envfile@^6.1.0'
+    import * as pkg from '//unpkg.com/envfile@^6.2.0'
 </script>
 ```
 
@@ -113,7 +113,7 @@ console.log(stringify({ a: 1, b: 2 }))
 
 ``` html
 <script type="module">
-    import * as pkg from '//dev.jspm.io/envfile@6.1.0'
+    import * as pkg from '//dev.jspm.io/envfile@6.2.0'
 </script>
 ```
 
