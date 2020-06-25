@@ -10,7 +10,6 @@ const pwd = resolve(__dirname, '..')
 kava.suite('envfile', function (describe, it) {
 	it('should work without comments', function (done) {
 		const command = `echo "a=1\\nb:2\\nc = 3\\nd : 4" | npx . env2json | npx . json2env`
-		process.env.DEBUG_ESNEXTGUARDIAN = ''
 		// @ts-ignore
 		exec(command, { cwd: pwd }, function (err, stdout) {
 			errorEqual(err, null, 'no error to exist')
@@ -21,7 +20,6 @@ kava.suite('envfile', function (describe, it) {
 
 	it('comments should be ignored', function (done) {
 		const command = `echo "#comments with = are ignored\\na=1\\n" | npx . env2json | npx . json2env`
-		process.env.DEBUG_ESNEXTGUARDIAN = ''
 		// @ts-ignore
 		exec(command, { cwd: pwd }, function (err, stdout) {
 			errorEqual(err, null, 'no error to exist')
