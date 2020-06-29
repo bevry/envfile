@@ -149,7 +149,7 @@
     "make-deno-edition": "^0.13.0",
     "prettier": "^2.0.5",
     "projectz": "^2.10.1",
-    "safeps": "10.9.0",
+    "safeps": "10.10.0",
     "surge": "^0.21.3",
     "typedoc": "^0.17.7",
     "typescript": "^3.9.5",
