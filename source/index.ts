@@ -1,7 +1,7 @@
 /** Parse an envfile string */
-export function parse<T>(src: string): T {
+export function parse(src: string): Record<string, string> {
 	// Try parse envfile string
-	const result: { [key: string]: any } = {}
+	const result: { [key: string]: string } = {}
 	const lines = src.toString().split('\n')
 	for (const line of lines) {
 		const match = line.match(/^([^=:#]+?)[=:](.*)/)
@@ -11,7 +11,7 @@ export function parse<T>(src: string): T {
 			result[key] = value
 		}
 	}
-	return result as T
+	return result
 }
 
 /** Turn an object into an envfile string */
