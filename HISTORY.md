@@ -1,5 +1,12 @@
 # History
 
+## v6.16.0 2021 July 30
+
+-   Node v16 support
+-   Now supports `--env2json`, `--json2env` as well.
+-   Don't use npx in our tests anymore, it doesn't do what we want just causes problems, such as prompting for installs and messing with output.
+-   Updated dependencies, [base files](https://github.com/bevry/base), and [editions](https://editions.bevry.me) using [boundation](https://github.com/bevry/boundation)
+
 ## v6.15.0 2021 July 28
 
 -   Updated dependencies, [base files](https://github.com/bevry/base), and [editions](https://editions.bevry.me) using [boundation](https://github.com/bevry/boundation)
