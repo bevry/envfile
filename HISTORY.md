@@ -1,5 +1,9 @@
 # History
 
+## v6.17.0 2021 July 30
+
+-   Use `Record<string, string>` for data, and `Record<string, any>` for inputs. - Thanks to [adamhl8](https://github.com/adamhl8) for [pull request #163](https://github.com/bevry/envfile/pull/163)
+
 ## v6.16.0 2021 July 30
 
 -   Node v16 support

@@ -96,14 +96,14 @@ console.log(stringify({ a: 1, b: 2 }))
 <a href="https://deno.land" title="Deno is a secure runtime for JavaScript and TypeScript, it is an alternative for Node.js"><h3>Deno</h3></a>
 
 ``` typescript
-import * as pkg from 'https://unpkg.com/envfile@^6.16.0/edition-deno/index.ts'
+import * as pkg from 'https://unpkg.com/envfile@^6.17.0/edition-deno/index.ts'
 ```
 
 <a href="https://www.skypack.dev" title="Skypack is a JavaScript Delivery Network for modern web apps"><h3>Skypack</h3></a>
 
 ``` html
 <script type="module">
-    import * as pkg from '//cdn.skypack.dev/envfile@^6.16.0'
+    import * as pkg from '//cdn.skypack.dev/envfile@^6.17.0'
 </script>
 ```
 
@@ -111,7 +111,7 @@ import * as pkg from 'https://unpkg.com/envfile@^6.16.0/edition-deno/index.ts'
 
 ``` html
 <script type="module">
-    import * as pkg from '//unpkg.com/envfile@^6.16.0'
+    import * as pkg from '//unpkg.com/envfile@^6.17.0'
 </script>
 ```
 
@@ -119,7 +119,7 @@ import * as pkg from 'https://unpkg.com/envfile@^6.16.0/edition-deno/index.ts'
 
 ``` html
 <script type="module">
-    import * as pkg from '//dev.jspm.io/envfile@6.16.0'
+    import * as pkg from '//dev.jspm.io/envfile@6.17.0'
 </script>
 ```
 
@@ -185,6 +185,7 @@ These amazing people have contributed code to this project:
 
 <ul><li><a href="https://github.com/andyedwardsibm">Andy Edwards</a> — <a href="https://github.com/bevry/envfile/commits?author=andyedwardsibm" title="View the GitHub contributions of Andy Edwards on repository bevry/envfile">view contributions</a></li>
 <li><a href="https://github.com/balupton">Benjamin Lupton</a> — <a href="https://github.com/bevry/envfile/commits?author=balupton" title="View the GitHub contributions of Benjamin Lupton on repository bevry/envfile">view contributions</a></li>
+<li><a href="https://github.com/adamhl8">adamhl8</a> — <a href="https://github.com/bevry/envfile/commits?author=adamhl8" title="View the GitHub contributions of adamhl8 on repository bevry/envfile">view contributions</a></li>
 <li><a href="https://github.com/andyedwardsdfdl">andyedwardsdfdl</a> — <a href="https://github.com/bevry/envfile/commits?author=andyedwardsdfdl" title="View the GitHub contributions of andyedwardsdfdl on repository bevry/envfile">view contributions</a></li></ul>
 
 <a href="https://github.com/bevry/envfile/blob/master/CONTRIBUTING.md#files">Discover how you can contribute by heading on over to the <code>CONTRIBUTING.md</code> file.</a>

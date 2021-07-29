@@ -9,6 +9,7 @@ process.stdin.on('readable', function () {
 	const chunk = process.stdin.read()
 	if (chunk) data += chunk.toString()
 })
+
 process.stdin.on('end', function () {
 	const result = toEnv()
 		? stringify(JSON.parse(data))

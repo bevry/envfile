@@ -1,7 +1,14 @@
-/** Parse an envfile string */
-export function parse(src: string): Record<string, string> {
-	// Try parse envfile string
-	const result: { [key: string]: string } = {}
+/** We don't normalize anything, so it is just strings and strings. */
+export type Data = Record<string, string>
+
+/** We typecast the value as a string so that it is compatible with envfiles.  */
+export type Input = Record<string, any>
+
+// perhaps in the future we can use @bevry/json's toJSON and parseJSON and JSON.stringify to support more advanced types
+
+/** Parse an envfile string. */
+export function parse(src: string): Data {
+	const result: Data = {}
 	const lines = src.toString().split('\n')
 	for (const line of lines) {
 		const match = line.match(/^([^=:#]+?)[=:](.*)/)
@@ -14,19 +21,14 @@ export function parse(src: string): Record<string, string> {
 	return result
 }
 
-/** Turn an object into an envfile string */
-export function stringify(obj: object): string {
-	// Prepare
+/** Turn an object into an envfile string. */
+export function stringify(obj: Input): string {
 	let result = ''
-
-	// Stringify
 	for (const [key, value] of Object.entries(obj)) {
 		if (key) {
 			const line = `${key}=${String(value)}`
 			result += line + '\n'
 		}
 	}
-
-	// Return
 	return result
 }
