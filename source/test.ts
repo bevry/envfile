@@ -1,5 +1,5 @@
 // Import
-import { equal, errorEqual } from 'assert-helpers'
+import { deepEqual, equal, errorEqual } from 'assert-helpers'
 import kava from 'kava'
 import safeps from 'safeps'
 import { resolve } from 'path'
@@ -42,7 +42,7 @@ kava.suite('envfile', function (suite, test) {
 		})
 	})
 
-	test('quotes should be preserved', function (done) {
+	test('quotes should be preserved and normalized', function (done) {
 		const str = `name="bob"\nplanet="earth"\nrace='human'`
 		const expected = {
 			name: 'bob',
@@ -51,6 +51,7 @@ kava.suite('envfile', function (suite, test) {
 		}
 		const result = parse(str)
 
-		equal(result, expected)
+		deepEqual(result, expected)
+		done()
 	})
 })
