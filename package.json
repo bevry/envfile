@@ -1,6 +1,6 @@
 {
   "name": "envfile",
-  "version": "6.17.0",
+  "version": "6.18.0",
   "description": "Parse and stringify the environment configuration files and format, also known as .env files and dotenv files",
   "homepage": "https://github.com/bevry/envfile",
   "license": "MIT",

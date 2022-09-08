@@ -1,5 +1,9 @@
 # History
 
+## v6.18.0 2022 September 8
+
+-   Normalize string values when parsing to JSON - Thanks to [kcarra](https://github.com/kcarra) for [pull request #194](https://github.com/bevry/envfile/pull/194)
+
 ## v6.17.0 2021 July 30
 
 -   Use `Record<string, string>` for data, and `Record<string, any>` for inputs. - Thanks to [adamhl8](https://github.com/adamhl8) for [pull request #163](https://github.com/bevry/envfile/pull/163)
