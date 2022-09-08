@@ -1,9 +1,10 @@
 // Import
-import { equal, errorEqual } from 'assert-helpers'
+import { deepEqual, equal, errorEqual } from 'assert-helpers'
 import kava from 'kava'
 import safeps from 'safeps'
 import { resolve } from 'path'
 import { readJSON } from '@bevry/json'
+import { parse } from './index.js'
 
 import filedirname from 'filedirname'
 const [file, dir] = filedirname()
@@ -39,5 +40,18 @@ kava.suite('envfile', function (suite, test) {
 			equal(stdout.trim(), 'a=1', 'stdout to be as expected')
 			done()
 		})
+	})
+
+	test('quotes should be preserved and normalized', function (done) {
+		const str = `name="bob"\nplanet="earth"\nrace='human'`
+		const expected = {
+			name: 'bob',
+			planet: 'earth',
+			race: 'human',
+		}
+		const result = parse(str)
+
+		deepEqual(result, expected)
+		done()
 	})
 })
