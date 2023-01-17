@@ -157,10 +157,12 @@
   "exports": {
     "node": {
       "import": "./edition-es2019-esm/index.js",
-      "require": "./edition-es2019/index.js"
+      "require": "./edition-es2019/index.js",
+      "types": "./compiled-types/index.d.ts"
     },
     "browser": {
-      "import": "./edition-browsers/index.js"
+      "import": "./edition-browsers/index.js",
+      "types": "./compiled-types/index.d.ts"
     }
   },
   "deno": "edition-deno/index.ts",
