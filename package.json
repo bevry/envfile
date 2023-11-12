@@ -179,7 +179,7 @@
     "filedirname": "^2.6.0",
     "kava": "^5.14.0",
     "make-deno-edition": "^1.3.0",
-    "prettier": "^2.3.2",
+    "prettier": "^3.0.3",
     "projectz": "^2.21.0",
     "safeps": "^10.16.0",
     "surge": "^0.23.0",
