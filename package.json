@@ -175,7 +175,7 @@
     "eslint": "^7.31.0",
     "eslint-config-bevry": "^3.26.0",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "filedirname": "^2.6.0",
     "kava": "^5.14.0",
     "make-deno-edition": "^1.3.0",
