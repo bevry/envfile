@@ -10,10 +10,9 @@
 <span class="badge-githubworkflow"><a href="https://github.com/bevry/envfile/actions?query=workflow%3Abevry" title="View the status of this project's GitHub Workflow: bevry"><img src="https://github.com/bevry/envfile/workflows/bevry/badge.svg" alt="Status of the GitHub Workflow: bevry" /></a></span>
 <span class="badge-npmversion"><a href="https://npmjs.org/package/envfile" title="View this project on NPM"><img src="https://img.shields.io/npm/v/envfile.svg" alt="NPM version" /></a></span>
 <span class="badge-npmdownloads"><a href="https://npmjs.org/package/envfile" title="View this project on NPM"><img src="https://img.shields.io/npm/dm/envfile.svg" alt="NPM downloads" /></a></span>
-<span class="badge-daviddm"><a href="https://david-dm.org/bevry/envfile" title="View the status of this project's dependencies on DavidDM"><img src="https://img.shields.io/david/bevry/envfile.svg" alt="Dependency Status" /></a></span>
-<span class="badge-daviddmdev"><a href="https://david-dm.org/bevry/envfile#info=devDependencies" title="View the status of this project's development dependencies on DavidDM"><img src="https://img.shields.io/david/dev/bevry/envfile.svg" alt="Dev Dependency Status" /></a></span>
 <br class="badge-separator" />
 <span class="badge-githubsponsors"><a href="https://github.com/sponsors/balupton" title="Donate to this project using GitHub Sponsors"><img src="https://img.shields.io/badge/github-donate-yellow.svg" alt="GitHub Sponsors donate button" /></a></span>
+<span class="badge-thanksdev"><a href="https://thanks.dev/u/gh/balupton" title="Donate to this project using ThanksDev"><img src="https://img.shields.io/badge/thanksdev-donate-yellow.svg" alt="ThanksDev donate button" /></a></span>
 <span class="badge-patreon"><a href="https://patreon.com/bevry" title="Donate to this project using Patreon"><img src="https://img.shields.io/badge/patreon-donate-yellow.svg" alt="Patreon donate button" /></a></span>
 <span class="badge-flattr"><a href="https://flattr.com/profile/balupton" title="Donate to this project using Flattr"><img src="https://img.shields.io/badge/flattr-donate-yellow.svg" alt="Flattr donate button" /></a></span>
 <span class="badge-liberapay"><a href="https://liberapay.com/bevry" title="Donate to this project using Liberapay"><img src="https://img.shields.io/badge/liberapay-donate-yellow.svg" alt="Liberapay donate button" /></a></span>
@@ -96,14 +95,14 @@ console.log(stringify({ a: 1, b: 2 }))
 <a href="https://deno.land" title="Deno is a secure runtime for JavaScript and TypeScript, it is an alternative for Node.js"><h3>Deno</h3></a>
 
 ``` typescript
-import * as pkg from 'https://unpkg.com/envfile@^6.18.0/edition-deno/index.ts'
+import * as pkg from 'https://unpkg.com/envfile@^6.19.0/edition-deno/index.ts'
 ```
 
 <a href="https://www.skypack.dev" title="Skypack is a JavaScript Delivery Network for modern web apps"><h3>Skypack</h3></a>
 
 ``` html
 <script type="module">
-    import * as pkg from '//cdn.skypack.dev/envfile@^6.18.0'
+    import * as pkg from '//cdn.skypack.dev/envfile@^6.19.0'
 </script>
 ```
 
@@ -111,7 +110,7 @@ import * as pkg from 'https://unpkg.com/envfile@^6.18.0/edition-deno/index.ts'
 
 ``` html
 <script type="module">
-    import * as pkg from '//unpkg.com/envfile@^6.18.0'
+    import * as pkg from '//unpkg.com/envfile@^6.19.0'
 </script>
 ```
 
@@ -119,7 +118,7 @@ import * as pkg from 'https://unpkg.com/envfile@^6.18.0/edition-deno/index.ts'
 
 ``` html
 <script type="module">
-    import * as pkg from '//dev.jspm.io/envfile@6.18.0'
+    import * as pkg from '//dev.jspm.io/envfile@6.19.0'
 </script>
 ```
 
@@ -128,10 +127,10 @@ import * as pkg from 'https://unpkg.com/envfile@^6.18.0/edition-deno/index.ts'
 <p>This package is published with the following editions:</p>
 
 <ul><li><code>envfile/source/index.ts</code> is <a href="https://www.typescriptlang.org/" title="TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. ">TypeScript</a> source code with <a href="https://babeljs.io/docs/learn-es2015/#modules" title="ECMAScript Modules">Import</a> for modules</li>
-<li><code>envfile/edition-browsers/index.js</code> is <a href="https://www.typescriptlang.org/" title="TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. ">TypeScript</a> compiled against <a href="https://en.wikipedia.org/wiki/ECMAScript#11th_Edition_–_ECMAScript_2020" title="ECMAScript ES2020">ES2020</a> for web browsers with <a href="https://babeljs.io/docs/learn-es2015/#modules" title="ECMAScript Modules">Import</a> for modules</li>
-<li><code>envfile</code> aliases <code>envfile/edition-es2019/index.js</code></li>
-<li><code>envfile/edition-es2019/index.js</code> is <a href="https://www.typescriptlang.org/" title="TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. ">TypeScript</a> compiled against <a href="https://en.wikipedia.org/wiki/ECMAScript#10th_Edition_-_ECMAScript_2019" title="ECMAScript ES2019">ES2019</a> for <a href="https://nodejs.org" title="Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine">Node.js</a> 10 || 12 || 14 || 16 with <a href="https://nodejs.org/dist/latest-v5.x/docs/api/modules.html" title="Node/CJS Modules">Require</a> for modules</li>
-<li><code>envfile/edition-es2019-esm/index.js</code> is <a href="https://www.typescriptlang.org/" title="TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. ">TypeScript</a> compiled against <a href="https://en.wikipedia.org/wiki/ECMAScript#10th_Edition_-_ECMAScript_2019" title="ECMAScript ES2019">ES2019</a> for <a href="https://nodejs.org" title="Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine">Node.js</a> 12 || 14 || 16 with <a href="https://babeljs.io/docs/learn-es2015/#modules" title="ECMAScript Modules">Import</a> for modules</li>
+<li><code>envfile/edition-browsers/index.js</code> is <a href="https://www.typescriptlang.org/" title="TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. ">TypeScript</a> compiled against ES2022 for web browsers with <a href="https://babeljs.io/docs/learn-es2015/#modules" title="ECMAScript Modules">Import</a> for modules</li>
+<li><code>envfile</code> aliases <code>envfile/edition-es2022/index.js</code></li>
+<li><code>envfile/edition-es2022/index.js</code> is <a href="https://www.typescriptlang.org/" title="TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. ">TypeScript</a> compiled against ES2022 for <a href="https://nodejs.org" title="Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine">Node.js</a> 10 || 12 || 14 || 16 || 18 || 20 || 21 with <a href="https://nodejs.org/dist/latest-v5.x/docs/api/modules.html" title="Node/CJS Modules">Require</a> for modules</li>
+<li><code>envfile/edition-es2022-esm/index.js</code> is <a href="https://www.typescriptlang.org/" title="TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. ">TypeScript</a> compiled against ES2022 for <a href="https://nodejs.org" title="Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine">Node.js</a> 12 || 14 || 16 || 18 || 20 || 21 with <a href="https://babeljs.io/docs/learn-es2015/#modules" title="ECMAScript Modules">Import</a> for modules</li>
 <li><code>envfile/edition-deno/index.ts</code> is <a href="https://www.typescriptlang.org/" title="TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. ">TypeScript</a> source code made to be compatible with <a href="https://deno.land" title="Deno is a secure runtime for JavaScript and TypeScript, it is an alternative to Node.js">Deno</a></li></ul>
 
 <!-- /INSTALL -->
@@ -170,6 +169,7 @@ These amazing people are maintaining this project:
 No sponsors yet! Will you be the first?
 
 <span class="badge-githubsponsors"><a href="https://github.com/sponsors/balupton" title="Donate to this project using GitHub Sponsors"><img src="https://img.shields.io/badge/github-donate-yellow.svg" alt="GitHub Sponsors donate button" /></a></span>
+<span class="badge-thanksdev"><a href="https://thanks.dev/u/gh/balupton" title="Donate to this project using ThanksDev"><img src="https://img.shields.io/badge/thanksdev-donate-yellow.svg" alt="ThanksDev donate button" /></a></span>
 <span class="badge-patreon"><a href="https://patreon.com/bevry" title="Donate to this project using Patreon"><img src="https://img.shields.io/badge/patreon-donate-yellow.svg" alt="Patreon donate button" /></a></span>
 <span class="badge-flattr"><a href="https://flattr.com/profile/balupton" title="Donate to this project using Flattr"><img src="https://img.shields.io/badge/flattr-donate-yellow.svg" alt="Flattr donate button" /></a></span>
 <span class="badge-liberapay"><a href="https://liberapay.com/bevry" title="Donate to this project using Liberapay"><img src="https://img.shields.io/badge/liberapay-donate-yellow.svg" alt="Liberapay donate button" /></a></span>
@@ -183,9 +183,10 @@ No sponsors yet! Will you be the first?
 
 These amazing people have contributed code to this project:
 
-<ul><li><a href="https://github.com/andyedwardsibm">Andy Edwards</a> — <a href="https://github.com/bevry/envfile/commits?author=andyedwardsibm" title="View the GitHub contributions of Andy Edwards on repository bevry/envfile">view contributions</a></li>
+<ul><li><a href="https://github.com/adamhl8">Adam Langbert</a> — <a href="https://github.com/bevry/envfile/commits?author=adamhl8" title="View the GitHub contributions of Adam Langbert on repository bevry/envfile">view contributions</a></li>
+<li><a href="https://github.com/andyedwardsibm">Andy Edwards</a> — <a href="https://github.com/bevry/envfile/commits?author=andyedwardsibm" title="View the GitHub contributions of Andy Edwards on repository bevry/envfile">view contributions</a></li>
 <li><a href="https://github.com/balupton">Benjamin Lupton</a> — <a href="https://github.com/bevry/envfile/commits?author=balupton" title="View the GitHub contributions of Benjamin Lupton on repository bevry/envfile">view contributions</a></li>
-<li><a href="https://github.com/adamhl8">adamhl8</a> — <a href="https://github.com/bevry/envfile/commits?author=adamhl8" title="View the GitHub contributions of adamhl8 on repository bevry/envfile">view contributions</a></li>
+<li><a href="https://github.com/kcarra">Kevin Carrabine</a> — <a href="https://github.com/bevry/envfile/commits?author=kcarra" title="View the GitHub contributions of Kevin Carrabine on repository bevry/envfile">view contributions</a></li>
 <li><a href="https://github.com/andyedwardsdfdl">andyedwardsdfdl</a> — <a href="https://github.com/bevry/envfile/commits?author=andyedwardsdfdl" title="View the GitHub contributions of andyedwardsdfdl on repository bevry/envfile">view contributions</a></li></ul>
 
 <a href="https://github.com/bevry/envfile/blob/master/CONTRIBUTING.md#files">Discover how you can contribute by heading on over to the <code>CONTRIBUTING.md</code> file.</a>
@@ -203,6 +204,6 @@ Unless stated otherwise all works are:
 
 and licensed under:
 
-<ul><li><a href="http://spdx.org/licenses/MIT.html">MIT License</a></li></ul>
+<ul><li><a href="http://spdx.org/licenses/Artistic-2.0.html">Artistic License 2.0</a></li></ul>
 
 <!-- /LICENSE -->

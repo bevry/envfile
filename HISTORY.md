@@ -1,5 +1,10 @@
 # History
 
+## v6.19.0 2023 November 13
+
+-   Updated dependencies, [base files](https://github.com/bevry/base), and [editions](https://editions.bevry.me) using [boundation](https://github.com/bevry/boundation)
+-   Updated license from [`MIT`](http://spdx.org/licenses/MIT.html) to [`Artistic-2.0`](http://spdx.org/licenses/Artistic-2.0.html)
+
 ## v6.18.0 2022 September 8
 
 -   Normalize string values when parsing to JSON - Thanks to [kcarra](https://github.com/kcarra) for [pull request #194](https://github.com/bevry/envfile/pull/194)
