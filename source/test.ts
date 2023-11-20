@@ -4,7 +4,7 @@ import kava from 'kava'
 import safeps from 'safeps'
 import { resolve } from 'path'
 import { readJSON } from '@bevry/json'
-import { parse } from './index.js'
+import { parse, stringify } from './index.js'
 
 import filedirname from 'filedirname'
 const [file, dir] = filedirname()
@@ -23,7 +23,7 @@ kava.test('envfile test prep', function (done) {
 // Test
 kava.suite('envfile', function (suite, test) {
 	test('should work without comments', function (done) {
-		const command = `echo "a=1\\nb:2\\nc = 3\\nd : 4" | node ${binPath} env2json | node ${binPath} json2env`
+		const command = `echo "a=1\nb:2\nc = 3\nd : 4" | node ${binPath} env2json | node ${binPath} json2env`
 		// @ts-ignore
 		safeps.exec(command, { cwd: root }, function (err, stdout) {
 			errorEqual(err, null, 'no error to exist')
@@ -33,7 +33,7 @@ kava.suite('envfile', function (suite, test) {
 	})
 
 	test('comments should be ignored', function (done) {
-		const command = `echo "#comments with = are ignored\\na=1\\n" | node ${binPath} env2json | node ${binPath} json2env`
+		const command = `echo "#comments with = are ignored\na=1\n" | node ${binPath} env2json | node ${binPath} json2env`
 		// @ts-ignore
 		safeps.exec(command, { cwd: root }, function (err, stdout) {
 			errorEqual(err, null, 'no error to exist')
@@ -52,6 +52,26 @@ kava.suite('envfile', function (suite, test) {
 		const result = parse(str)
 
 		deepEqual(result, expected)
+		done()
+	})
+
+	test('comment should be maintain', function (done) {
+		const str = ` #hello\nname="bob"\n#world \nplanet="earth"\nrace='human'`
+		const expected = ` #hello\nname=bob\n#world \nplanet=earth\nrace=human`
+		const options = { keepComments: true }
+		const result = stringify(parse(str, options), options)
+
+		equal(result, expected)
+		done()
+	})
+
+	test('comment should be maintain correct with blank line', function (done) {
+		const str = ` #hello\n\nboo=foo\n\n#world\nhi=he`
+		const expected = ` #hello\nboo=foo\n#world\nhi=he`
+		const options = { keepComments: true }
+		const result = stringify(parse(str, options), options)
+
+		equal(result, expected)
 		done()
 	})
 })
