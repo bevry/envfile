@@ -1,6 +1,6 @@
 {
   "name": "envfile",
-  "version": "6.20.0",
+  "version": "6.21.0",
   "description": "Parse and stringify the environment configuration files and format, also known as .env files and dotenv files",
   "homepage": "https://github.com/bevry/envfile",
   "license": "Artistic-2.0",
@@ -32,18 +32,19 @@
       "githubsponsors",
       "thanksdev",
       "patreon",
-      "flattr",
       "liberapay",
       "buymeacoffee",
       "opencollective",
       "crypto",
       "paypal",
-      "wishlist"
+      "---",
+      "discord",
+      "twitch"
     ],
     "config": {
       "githubWorkflow": "bevry",
       "githubSponsorsUsername": "balupton",
-      "thanksdevGithubUsername": "balupton",
+      "thanksdevGithubUsername": "bevry",
       "buymeacoffeeUsername": "balupton",
       "cryptoURL": "https://bevry.me/crypto",
       "flattrUsername": "balupton",
@@ -52,6 +53,9 @@
       "patreonUsername": "bevry",
       "paypalURL": "https://bevry.me/paypal",
       "wishlistURL": "https://bevry.me/wishlist",
+      "discordServerID": "1147436445783560193",
+      "discordServerInvite": "nQuXddV7VP",
+      "twitchUsername": "balupton",
       "githubUsername": "bevry",
       "githubRepository": "envfile",
       "githubSlug": "bevry/envfile",
@@ -137,6 +141,17 @@
       }
     },
     {
+      "description": "TypeScript compiled Types with Import for modules",
+      "directory": "edition-types",
+      "entry": "index.d.ts",
+      "tags": [
+        "compiled",
+        "types",
+        "import"
+      ],
+      "engines": false
+    },
+    {
       "description": "TypeScript source code made to be compatible with Deno",
       "directory": "edition-deno",
       "entry": "index.ts",
@@ -152,15 +167,17 @@
     }
   ],
   "bin": "bin.cjs",
-  "types": "./compiled-types/",
+  "types": "edition-types/index.d.ts",
   "type": "module",
   "main": "edition-es2022/index.js",
   "exports": {
     "node": {
+      "types": "./edition-types/index.d.ts",
       "import": "./edition-es2022-esm/index.js",
       "require": "./edition-es2022/index.js"
     },
     "browser": {
+      "types": "./edition-types/index.d.ts",
       "import": "./edition-browsers/index.js"
     }
   },
@@ -168,37 +185,37 @@
   "browser": "edition-browsers/index.js",
   "module": "edition-browsers/index.js",
   "devDependencies": {
-    "@bevry/json": "^1.7.0",
+    "@bevry/json": "^1.10.0",
     "@bevry/update-contributors": "^1.23.0",
-    "@types/node": "^20.9.0",
-    "@typescript-eslint/eslint-plugin": "^6.11.0",
-    "@typescript-eslint/parser": "^6.11.0",
-    "assert-helpers": "^11.4.0",
-    "eslint": "^8.53.0",
-    "eslint-config-bevry": "^4.0.0",
+    "@types/node": "^20.9.3",
+    "@typescript-eslint/eslint-plugin": "^6.12.0",
+    "@typescript-eslint/parser": "^6.12.0",
+    "assert-helpers": "^11.5.0",
+    "eslint": "^8.54.0",
+    "eslint-config-bevry": "^5.0.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.1",
-    "filedirname": "^2.9.0",
-    "kava": "^7.2.0",
+    "filedirname": "^2.10.0",
+    "kava": "^7.3.0",
     "make-deno-edition": "^1.3.0",
     "prettier": "^3.1.0",
-    "projectz": "^3.0.0",
-    "safeps": "^11.2.0",
+    "projectz": "^3.2.0",
+    "safeps": "^11.3.0",
     "surge": "^0.23.1",
     "typedoc": "^0.25.3",
     "typescript": "5.2.2",
-    "valid-directory": "^4.2.0",
-    "valid-module": "^2.2.0"
+    "valid-directory": "^4.4.0",
+    "valid-module": "^2.4.0"
   },
   "scripts": {
     "our:bin": "node ./bin.cjs",
     "our:clean": "rm -rf ./docs ./edition* ./es2015 ./es5 ./out ./.next",
-    "our:compile": "npm run our:compile:deno && npm run our:compile:edition-browsers && npm run our:compile:edition-es2022 && npm run our:compile:edition-es2022-esm && npm run our:compile:types",
+    "our:compile": "npm run our:compile:deno && npm run our:compile:edition-browsers && npm run our:compile:edition-es2022 && npm run our:compile:edition-es2022-esm && npm run our:compile:edition-types",
     "our:compile:deno": "make-deno-edition --attempt",
     "our:compile:edition-browsers": "tsc --module ESNext --target ES2022 --outDir ./edition-browsers --project tsconfig.json && ( test ! -d edition-browsers/source || ( mv edition-browsers/source edition-temp && rm -rf edition-browsers && mv edition-temp edition-browsers ) )",
     "our:compile:edition-es2022": "tsc --module commonjs --target ES2022 --outDir ./edition-es2022 --project tsconfig.json && ( test ! -d edition-es2022/source || ( mv edition-es2022/source edition-temp && rm -rf edition-es2022 && mv edition-temp edition-es2022 ) ) && printf '%s' '{\"type\": \"commonjs\"}' > edition-es2022/package.json",
     "our:compile:edition-es2022-esm": "tsc --module ESNext --target ES2022 --outDir ./edition-es2022-esm --project tsconfig.json && ( test ! -d edition-es2022-esm/source || ( mv edition-es2022-esm/source edition-temp && rm -rf edition-es2022-esm && mv edition-temp edition-es2022-esm ) ) && printf '%s' '{\"type\": \"module\"}' > edition-es2022-esm/package.json",
-    "our:compile:types": "tsc --project tsconfig.json --emitDeclarationOnly --declaration --declarationMap --declarationDir ./compiled-types && ( test ! -d compiled-types/source || ( mv compiled-types/source edition-temp && rm -rf compiled-types && mv edition-temp compiled-types ) )",
+    "our:compile:edition-types": "tsc --emitDeclarationOnly --declaration --declarationMap --declarationDir ./edition-types --project tsconfig.json && ( test ! -d edition-types/source || ( mv edition-types/source edition-temp && rm -rf edition-types && mv edition-temp edition-types ) )",
     "our:deploy": "printf '%s\n' 'no need for this project'",
     "our:meta": "npm run our:meta:contributors && npm run our:meta:docs && npm run our:meta:projectz",
     "our:meta:contributors": "update-contributors",
