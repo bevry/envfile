@@ -1,23 +1,29 @@
-// Import
+// external
 import { deepEqual, equal, errorEqual } from 'assert-helpers'
 import kava from 'kava'
 import safeps from 'safeps'
-import { resolve } from 'path'
 import { readJSON } from '@bevry/json'
+import filedirname from 'filedirname'
+import promiseErrback from 'promise-errback'
+
+// builtin
+import { resolve } from 'path'
+
+// local
 import { parse } from './index.js'
 
-import filedirname from 'filedirname'
 const [file, dir] = filedirname()
 const root = resolve(dir, '..')
 const packagePath = resolve(root, 'package.json')
 
 let binPath: string
 kava.test('envfile test prep', function (done) {
-	Promise.resolve()
-		.then(async function () {
+	promiseErrback(
+		Promise.resolve().then(async function () {
 			binPath = resolve(root, (await readJSON<any>(packagePath)).bin)
-		})
-		.finally(done)
+		}),
+		done
+	)
 })
 
 // Test
