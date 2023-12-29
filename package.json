@@ -1,9 +1,17 @@
 {
   "name": "envfile",
-  "version": "7.0.0",
+  "version": "7.1.0",
+  "license": "Artistic-2.0",
   "description": "Parse and stringify the environment configuration files and format, also known as .env files and dotenv files",
   "homepage": "https://github.com/bevry/envfile",
-  "license": "Artistic-2.0",
+  "funding": "https://bevry.me/fund",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bevry/envfile.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bevry/envfile/issues"
+  },
   "keywords": [
     ".env",
     "browser",
@@ -62,25 +70,56 @@
       "npmPackageName": "envfile"
     }
   },
-  "funding": "https://bevry.me/fund",
-  "author": "2013+ Bevry Pty Ltd <us@bevry.me> (http://bevry.me)",
+  "author": "2013+ Benjamin Lupton <b@lupton.cc> (https://balupton.com) (https://github.com/balupton)",
+  "authors": [
+    "2013+ Benjamin Lupton <b@lupton.cc> (https://balupton.com) (https://github.com/balupton): Accelerating collaborative wisdom."
+  ],
   "maintainers": [
-    "Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)"
+    "Benjamin Lupton <b@lupton.cc> (https://balupton.com) (https://github.com/balupton): Accelerating collaborative wisdom."
   ],
   "contributors": [
     "Adam Langbert <adamhl@pm.me> (https://github.com/adamhl8)",
     "Andy Edwards (https://github.com/andyedwardsibm)",
-    "Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)",
-    "Kevin Carrabine (https://github.com/kcarra)",
-    "andyedwardsdfdl (https://github.com/andyedwardsdfdl)"
+    "andyedwardsdfdl (https://github.com/andyedwardsdfdl)",
+    "Benjamin Lupton <b@lupton.cc> (https://balupton.com) (https://github.com/balupton)",
+    "Kevin Carrabine (https://github.com/kcarra)"
   ],
-  "bugs": {
-    "url": "https://github.com/bevry/envfile/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/bevry/envfile.git"
-  },
+  "sponsors": [
+    "Andrew Nesbitt (https://nesbitt.io) (https://github.com/andrew): Software engineer and researcher",
+    "Balsa <hello@balsa.com> (https://balsa.com) (https://github.com/balsa): We're Balsa, and we're building tools for builders.",
+    "Codecov <hello-codecov@sentry.io> (https://codecov.io) (https://github.com/codecov): Empower developers with tools to improve code quality and testing.",
+    "Poonacha Medappa (https://poonachamedappa.com) (https://github.com/km-Poonacha)",
+    "Rob Morris <rob@prismatik.com.au> (https://github.com/Rob-Morris)",
+    "Sentry (https://sentry.io) (https://github.com/getsentry): Real-time crash reporting for your web apps, mobile apps, and games.",
+    "Syntax <scott@syntax.fm> (https://syntax.fm) (https://github.com/syntaxfm): Syntax Podcast"
+  ],
+  "donors": [
+    "Andrew Nesbitt (https://nesbitt.io) (https://github.com/andrew)",
+    "Armen Mkrtchian (https://mogoni.dev) (https://github.com/Armenm)",
+    "Balsa <hello@balsa.com> (https://balsa.com) (https://github.com/balsa)",
+    "Chad (https://opencollective.com/chad8)",
+    "Codecov <hello-codecov@sentry.io> (https://codecov.io) (https://github.com/codecov)",
+    "dr.dimitru (https://veliovgroup.com) (https://github.com/dr-dimitru)",
+    "Elliott Ditman (https://elliottditman.com) (https://github.com/elliottditman)",
+    "entroniq (https://gitlab.com/entroniq) (https://thanks.dev/d/gl/entroniq)",
+    "GitHub (https://github.com/about) (https://github.com/github)",
+    "Hunter Beast (https://cryptoquick.com) (https://github.com/cryptoquick)",
+    "Jean-Luc Geering (https://github.com/jlgeering) (https://opencollective.com/jlgeering) (https://twitter.com/jlgeering)",
+    "Michael Duane Mooring (https://mdm.cc) (https://github.com/mikeumus) (https://opencollective.com/mikeumus) (https://twitter.com/mikeumus)",
+    "Michael Harry Scepaniak <mhs1.sys@gmail.com> (https://michaelscepaniak.com) (https://github.com/hispanic)",
+    "Mohammed Shah <shah@idk.uno> (https://github.com/smashah) (https://thanks.dev/d/gh/smashah) (https://twitter.com/smashah)",
+    "Mr. Henry <hello@mrhenry.be> (https://mrhenry.be) (https://github.com/mrhenry)",
+    "Nermal <nermalcat69@skiff.com> (https://arjunaditya.vercel.app) (https://github.com/nermalcat69)",
+    "Pleo (https://pleo.io) (https://github.com/pleo-io)",
+    "Poonacha Medappa (https://poonachamedappa.com) (https://github.com/km-Poonacha)",
+    "Rob Morris <rob@prismatik.com.au> (https://github.com/Rob-Morris)",
+    "Robert de Forest <guitar.robot@gmail.com> (https://github.com/rdeforest)",
+    "Sentry (https://sentry.io) (https://github.com/getsentry)",
+    "ServieJS (https://github.com/serviejs) (https://thanks.dev/d/gh/serviejs)",
+    "Skunk Team (https://skunk.team) (https://github.com/skunkteam)",
+    "Syntax <scott@syntax.fm> (https://syntax.fm) (https://github.com/syntaxfm)",
+    "WriterJohnBuck (https://github.com/WriterJohnBuck)"
+  ],
   "engines": {
     "node": ">=8"
   },
@@ -185,28 +224,24 @@
   "browser": "edition-browsers/index.js",
   "module": "edition-browsers/index.js",
   "devDependencies": {
-    "@bevry/json": "^2.0.0",
-    "@bevry/update-contributors": "^1.23.0",
-    "@types/node": "^20.10.0",
-    "@typescript-eslint/eslint-plugin": "^6.12.0",
-    "@typescript-eslint/parser": "^6.12.0",
-    "assert-helpers": "^11.6.0",
-    "eslint": "^8.54.0",
-    "eslint-config-bevry": "^5.1.0",
-    "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-prettier": "^5.0.1",
-    "filedirname": "^3.0.1",
-    "kava": "^7.3.0",
-    "make-deno-edition": "^2.0.0",
-    "prettier": "^3.1.0",
-    "projectz": "^3.3.0",
-    "promise-errback": "^1.0.0",
-    "safeps": "^11.3.0",
-    "surge": "^0.23.1",
-    "typedoc": "^0.25.3",
-    "typescript": "5.2.2",
-    "valid-directory": "^4.5.0",
-    "valid-module": "^2.5.0"
+    "@types/node": "^20.10.5",
+    "@typescript-eslint/eslint-plugin": "^6.16.0",
+    "@typescript-eslint/parser": "^6.16.0",
+    "assert-helpers": "^11.12.0",
+    "eslint": "^8.56.0",
+    "eslint-config-bevry": "^5.4.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.2",
+    "filedirname": "^3.4.0",
+    "kava": "^7.8.0",
+    "make-deno-edition": "^2.3.0",
+    "prettier": "^3.1.1",
+    "projectz": "^4.2.0",
+    "safeps": "^11.6.0",
+    "typedoc": "^0.25.4",
+    "typescript": "5.3.3",
+    "valid-directory": "^4.9.0",
+    "valid-module": "^2.6.0"
   },
   "scripts": {
     "our:bin": "node ./bin.cjs",
@@ -218,11 +253,10 @@
     "our:compile:edition-es2022-esm": "tsc --module ESNext --target ES2022 --outDir ./edition-es2022-esm --project tsconfig.json && ( test ! -d edition-es2022-esm/source || ( mv edition-es2022-esm/source edition-temp && rm -rf edition-es2022-esm && mv edition-temp edition-es2022-esm ) ) && printf '%s' '{\"type\": \"module\"}' > edition-es2022-esm/package.json",
     "our:compile:edition-types": "tsc --emitDeclarationOnly --declaration --declarationMap --declarationDir ./edition-types --project tsconfig.json && ( test ! -d edition-types/source || ( mv edition-types/source edition-temp && rm -rf edition-types && mv edition-temp edition-types ) )",
     "our:deploy": "printf '%s\n' 'no need for this project'",
-    "our:meta": "npm run our:meta:contributors && npm run our:meta:docs && npm run our:meta:projectz",
-    "our:meta:contributors": "update-contributors",
+    "our:meta": "npm run our:meta:docs && npm run our:meta:projectz",
     "our:meta:docs": "npm run our:meta:docs:typedoc",
     "our:meta:docs:typedoc": "rm -rf ./docs && typedoc --exclude '**/+(*test*|node_modules)' --excludeExternals --out ./docs ./source",
-    "our:meta:projectz": "projectz compile",
+    "our:meta:projectz": "projectz --offline",
     "our:release": "npm run our:release:prepare && npm run our:release:check-changelog && npm run our:release:check-dirty && npm run our:release:tag && npm run our:release:push",
     "our:release:check-changelog": "cat ./HISTORY.md | grep \"v$npm_package_version\" || (printf '%s\n' \"add a changelog entry for v$npm_package_version\" && exit -1)",
     "our:release:check-dirty": "git diff --exit-code",
@@ -232,8 +266,7 @@
     "our:setup": "npm run our:setup:install",
     "our:setup:install": "npm install",
     "our:test": "npm run our:verify && npm test",
-    "our:verify": "npm run our:verify:directory && npm run our:verify:eslint && npm run our:verify:module && npm run our:verify:prettier",
-    "our:verify:directory": "valid-directory",
+    "our:verify": "npm run our:verify:eslint && npm run our:verify:module && npm run our:verify:prettier",
     "our:verify:eslint": "eslint --fix --ignore-pattern '**/*.d.ts' --ignore-pattern '**/vendor/' --ignore-pattern '**/node_modules/' --ext .mjs,.js,.jsx,.ts,.tsx ./source",
     "our:verify:module": "valid-module",
     "our:verify:prettier": "prettier --write .",
@@ -247,6 +280,7 @@
   "prettier": {
     "semi": false,
     "singleQuote": true,
-    "trailingComma": "es5"
+    "trailingComma": "all",
+    "endOfLine": "lf"
   }
 }

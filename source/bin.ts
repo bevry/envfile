@@ -1,18 +1,23 @@
+// builtin
+import { argv, stdin, stdout } from 'process'
+
+// local
 import { parse, stringify } from './index.js'
 
-function toEnv() {
-	return process.argv.slice(1).join(' ').includes('json2env')
-}
+// are we wanting to convert from json to env?
+const jsonToEnv = argv.slice(1).join(' ').includes('json2env')
 
+// get the data
 let data = ''
-process.stdin.on('readable', function () {
-	const chunk = process.stdin.read()
+stdin.on('readable', function () {
+	const chunk = stdin.read()
 	if (chunk) data += chunk.toString()
 })
 
-process.stdin.on('end', function () {
-	const result = toEnv()
+// do the conversion
+stdin.on('end', function () {
+	const result = jsonToEnv
 		? stringify(JSON.parse(data))
 		: JSON.stringify(parse(data))
-	process.stdout.write(result)
+	stdout.write(result)
 })
