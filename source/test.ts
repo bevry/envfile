@@ -8,7 +8,7 @@ import filedirname from 'filedirname'
 import { resolve } from 'path'
 
 // local
-import { parse } from './index.js'
+import { parse, stringify } from './index.js'
 
 // prepare
 const [file, dir] = filedirname()
@@ -45,6 +45,30 @@ kava.suite('envfile', function (suite, test) {
 			race: 'human',
 		}
 		const result = parse(str)
+
+		deepEqual(result, expected)
+		done()
+	})
+
+	test('line breaks inside quotes should be preserved on parse', function (done) {
+		const str = `name="bob\nmarley"\nplanet=earth`
+		const expected = {
+			name: 'bob\nmarley',
+			planet: 'earth',
+		}
+		const result = parse(str)
+
+		deepEqual(result, expected)
+		done()
+	})
+
+	test('line breaks inside quotes should be preserved on stringify', function (done) {
+		const input = {
+			name: 'bob\nmarley',
+			planet: 'earth',
+		}
+		const expected = `name="bob\\nmarley"\nplanet=earth\n`
+		const result = stringify(input)
 
 		deepEqual(result, expected)
 		done()
