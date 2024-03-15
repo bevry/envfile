@@ -73,4 +73,17 @@ kava.suite('envfile', function (suite, test) {
 		deepEqual(result, expected)
 		done()
 	})
+
+	test('quotes inside quotes should be preserved', function (done) {
+		const str = `name="[{"key":"foo"},{"key":"bar"}]"\nplanet="earth"\nrace='human'`
+		const expected = {
+			name: '[{"key":"foo"},{"key":"bar"}]',
+			planet: 'earth',
+			race: 'human',
+		}
+		const result = parse(str)
+
+		deepEqual(result, expected)
+		done()
+	})
 })

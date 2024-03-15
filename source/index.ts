@@ -6,6 +6,19 @@ export type Input = Record<string, any>
 
 // perhaps in the future we can use @bevry/json's toJSON and parseJSON and JSON.stringify to support more advanced types
 
+function removeQuotes(str: string) {
+	// Check if the string starts and ends with single or double quotes
+	if (
+		(str.startsWith('"') && str.endsWith('"')) ||
+		(str.startsWith("'") && str.endsWith("'"))
+	) {
+		// Remove the quotes
+		return str.slice(1, -1)
+	}
+	// If the string is not wrapped in quotes, return it as is
+	return str
+}
+
 /** Parse an envfile string. */
 export function parse(src: string): Data {
 	const result: Data = {}
@@ -14,7 +27,7 @@ export function parse(src: string): Data {
 		const match = line.match(/^([^=:#]+?)[=:]((.|\n)*)/)
 		if (match) {
 			const key = match[1].trim()
-			const value = match[2].trim().replace(/['"]+/g, '')
+			const value = removeQuotes(match[2].trim())
 			result[key] = value
 		}
 	}
