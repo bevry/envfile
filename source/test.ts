@@ -86,4 +86,14 @@ kava.suite('envfile', function (suite, test) {
 		deepEqual(result, expected)
 		done()
 	})
+
+	test('line breaks should survive a parse(stringify()) round-trip', function (done) {
+		const input = {
+			greeting: 'hello\nworld',
+		}
+		const result = parse(stringify(input))
+
+		deepEqual(result, input)
+		done()
+	})
 })
