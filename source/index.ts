@@ -7,12 +7,14 @@ export type Input = Record<string, any>
 // perhaps in the future we can use @bevry/json's toJSON and parseJSON and JSON.stringify to support more advanced types
 
 function removeQuotes(str: string) {
-	// Check if the string starts and ends with single or double quotes
-	if (
-		(str.startsWith('"') && str.endsWith('"')) ||
-		(str.startsWith("'") && str.endsWith("'"))
-	) {
-		// Remove the quotes
+	// Double-quoted values: strip the quotes and unescape line breaks, reversing
+	// what stringify does and matching dotenv's double-quote semantics, so that a
+	// value containing a line break survives a parse(stringify(value)) round-trip.
+	if (str.startsWith('"') && str.endsWith('"')) {
+		return str.slice(1, -1).replace(/\\n/g, '\n')
+	}
+	// Single-quoted values: strip the quotes only, leaving the contents raw.
+	if (str.startsWith("'") && str.endsWith("'")) {
 		return str.slice(1, -1)
 	}
 	// If the string is not wrapped in quotes, return it as is
